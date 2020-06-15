@@ -3,7 +3,6 @@ require "http/server"
 require "json"
 require "log"
 require "./fiber.cr"
-require "./helper.cr"
 require "./types/inline/*"
 require "./types/*"
 

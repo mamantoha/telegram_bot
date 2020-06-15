@@ -1,15 +1,14 @@
-require "json"
-
 module TelegramBot
   class Video
-    JSON.mapping({
-      file_id:   String,
-      width:     Int32,
-      height:    Int32,
-      duration:  Int32,
-      thumb:     {type: PhotoSize, nilable: true},
-      mime_type: {type: String, nilable: true},
-      file_size: {type: Int32, nilable: true},
-    })
+    include JSON::Serializable
+
+    property file_id : String
+    property file_unique_id : String
+    property width : Int32
+    property height : Int32
+    property duration : Int32
+    property thumb : PhotoSize?
+    property mime_type : String?
+    property file_size : Int32?
   end
 end

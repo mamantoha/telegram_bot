@@ -1,14 +1,14 @@
-require "json"
-
 module TelegramBot
   class InputMediaVideo < InputMedia
-    JSON.mapping({
-      type:     String,
-      media:    String,
-      caption:  {type: String, nilable: true},
-      width:    {type: Int32, nilable: true},
-      height:   {type: Int32, nilable: true},
-      duration: {type: Int32, nilable: true},
-    })
+    include JSON::Serializable
+
+    property type : String
+    property media : String
+    property caption : String?
+    property parse_mode : String?
+    property width : Int32?
+    property height : Int32?
+    property duration : Int32?
+    property supports_streaming : Bool?
   end
 end

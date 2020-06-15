@@ -1,24 +1,22 @@
-require "json"
-
 module TelegramBot
   class ChatMember
-    JSON.mapping({
-      user:                      User,
-      status:                    String,
-      until_date:                {type: Int64, nilable: true},
-      can_be_edited:             {type: Bool, nilable: true},
-      can_change_info:           {type: Bool, nilable: true},
-      can_post_messages:         {type: Bool, nilable: true},
-      can_edit_messages:         {type: Bool, nilable: true},
-      can_delete_messages:       {type: Bool, nilable: true},
-      can_invite_users:          {type: Bool, nilable: true},
-      can_restrict_members:      {type: Bool, nilable: true},
-      can_pin_messages:          {type: Bool, nilable: true},
-      can_promote_members:       {type: Bool, nilable: true},
-      can_send_messages:         {type: Bool, nilable: true},
-      can_send_media_messages:   {type: Bool, nilable: true},
-      can_send_other_messages:   {type: Bool, nilable: true},
-      can_add_web_page_previews: {type: Bool, nilable: true},
-    })
+    include JSON::Serializable
+
+    property user : User
+    property status : String
+    property until_date : Int64?
+    property can_be_edited : Bool?
+    property can_change_info : Bool?
+    property can_post_messages : Bool?
+    property can_edit_messages : Bool?
+    property can_delete_messages : Bool?
+    property can_invite_users : Bool?
+    property can_restrict_members : Bool?
+    property can_pin_messages : Bool?
+    property can_promote_members : Bool?
+    property can_send_messages : Bool?
+    property can_send_media_messages : Bool?
+    property can_send_other_messages : Bool?
+    property can_add_web_page_previews : Bool?
   end
 end

@@ -1,18 +1,24 @@
-require "json"
-
 module TelegramBot
   class InlineQueryResultCachedMpeg4Gif < InlineQueryResult
-    FIELDS = {
-      type:                  {type: String, mustbe: "mpeg4_gif"},
-      id:                    String,
-      mpeg4_file_id:         String,
-      title:                 {type: String, nilable: true},
-      caption:               {type: String, nilable: true},
-      reply_markup:          {type: InlineKeyboardMarkup, nilable: true},
-      input_message_content: {type: InputMessageContent, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String = "mpeg4_gif"
+    property id : String
+    property mpeg4_file_id : String
+    property title : String?
+    property caption : String?
+    property reply_markup : InlineKeyboardMarkup?
+    property input_message_content : InputMessageContent?
+
+    def initialize(
+      @id : String,
+      @mpeg4_file_id : String,
+      *,
+      @title = nil,
+      @caption = nil,
+      @reply_markup = nil,
+      @input_message_content = nil
+    )
+    end
   end
 end
