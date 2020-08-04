@@ -4,6 +4,11 @@ version: 0.1.0
 authors:
   - Krisztián Ádám <adamkrisz@gmail.com>
 
-crystal: 0.34.0
+crystal: ">= 0.35.1"
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+
 
 license: MIT
