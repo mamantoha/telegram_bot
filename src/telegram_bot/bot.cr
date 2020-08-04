@@ -150,7 +150,7 @@ module TelegramBot
         if mf = msg.from
           from = mf
         else
-          return @whitelist.is_a?(Nil)
+          return @whitelist.nil?
         end
       else
         from = msg.from
@@ -188,7 +188,7 @@ module TelegramBot
           return false
         end
       end
-      return true
+      true
     end
 
     protected def request(method : String, force_http : Bool = false, params : Hash = {} of String => String | Int32 | Nil)
@@ -216,7 +216,7 @@ module TelegramBot
       if response.status_code == 200
         json = JSON.parse(response.body)
         if json["ok"]
-          return json["result"]
+          json["result"]
         else
           raise APIException.new(200, json)
         end
@@ -725,7 +725,7 @@ module TelegramBot
       res = res.not_nil!.as_a
       r = Array(GameHighScore).new
       res.each { |score| r << GameHighScore.from_json(score.to_json) }
-      return r
+      r
     end
 
     #
