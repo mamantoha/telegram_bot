@@ -1,18 +1,10 @@
-❌❌❌❌❌❌❌❌
-
-# Deprecation Notice
-
-Please consider using [tourmaline](https://github.com/protoncr/tourmaline) instead
-
-I'll try to keep this library compatible with the future versions of Crystal, but tourmaline is a well designed and maintained library which is superior in every way while sharing the same basics, thus I don't see any value in implementing the same improvements and fragmenting the community
-
-Bug fixes are still welcomed
-
-❌❌❌❌❌❌❌❌
-
 # TelegramBot
 
 [Telegram Bot API](https://core.telegram.org/bots/api) (3.2) wrapper for Crystal
+
+> This is a fork of [telegram_bot](https://github.com/hangyas/telegram_bot) which was originally written by Krisztián Ádám.
+>
+> The original repository is no longer maintained and does not work with the latest Crystal version.
 
 ## Current features
 
@@ -165,14 +157,14 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   telegram_bot:
-    github: hangyas/telegram_bot
+    github: mamantoha/telegram_bot
 ```
 
 ## Contributing
 
 __Contributing is very welcomed!__
 
-1. Fork it ( https://github.com/hangyas/TelegramBot/fork )
+1. Fork it ( https://github.com/mamantoha/TelegramBot/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -181,3 +173,4 @@ __Contributing is very welcomed!__
 ## Contributors
 
 - [hangyas](https://github.com/hangyas) Krisztián Ádám - creator, maintainer
+- [mamantoha](https://github.com/mamantoha) Anton Maminov - maintainer
