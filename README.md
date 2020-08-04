@@ -1,5 +1,7 @@
 # TelegramBot
 
+![Crystal CI](https://github.com/mamantoha/telegram_bot/workflows/Crystal%20CI/badge.svg?branch=develop)
+
 [Telegram Bot API](https://core.telegram.org/bots/api) (3.2) wrapper for Crystal
 
 > This is a fork of [telegram_bot](https://github.com/hangyas/telegram_bot) which was originally written by Krisztián Ádám.
