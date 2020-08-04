@@ -1,6 +1,7 @@
 # TelegramBot
 
 ![Crystal CI](https://github.com/mamantoha/telegram_bot/workflows/Crystal%20CI/badge.svg?branch=develop)
+[![Docs](https://img.shields.io/badge/docs-available-brightgreen.svg)](https://mamantoha.github.io/telegram_bot/)
 
 [Telegram Bot API](https://core.telegram.org/bots/api) (3.2) wrapper for Crystal
 
