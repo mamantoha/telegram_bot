@@ -818,5 +818,21 @@ module TelegramBot
       res = def_request "deleteStickerPositionInSet", sticker
       res.as_bool if res
     end
+
+    # Get the current list of the bot's commands.
+    def get_my_commands : Array(BotCommand)
+      res = request "getMyCommands"
+      res = res.not_nil!.as_a
+      commands = Array(BotCommand).new
+      res.each { |command| commands << BotCommand.from_json(command.to_json) }
+      commands
+    end
+
+    # Change the list of the bot's commands.
+    def set_my_commands(commands : Array(BotCommand))
+      commands = "[" + commands.join(", ") { |c| c.to_json } + "]"
+      res = def_request "setMyCommands", commands
+      res.as_bool if res
+    end
   end
 end
