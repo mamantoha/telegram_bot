@@ -28,7 +28,7 @@ getting updates:
 
 additional features:
 
-- [x] white & black lists
+- [x] allow & block lists
 - [x] command handler
 
 ## Usage
@@ -147,13 +147,13 @@ If you run your bot behind a proxy that performs SSL offloading (ie the proxy pr
 
 When running your bot in `serve` mode, the bot will favour executing any methods by sending a response as part of the Telegram request, rather than executing a new request.
 
-### White/blacklists
+### Allow/blocklists
 
-However it's not part of the API you can set black or white lists in the bot's constructor to filter your users by username.
+However it's not part of the API you can set block or allow lists in the bot's constructor to filter your users by username.
 
-`whitelist`: if user is not present on the list (or doesn't have username) the message won't be handled
+`allowlist`: if user is not present on the list (or doesn't have username) the message won't be handled
 
-`blacklist`: if user is present on the list the message won't be handled
+`blocklist`: if user is present on the list the message won't be handled
 
 ## Installation
 

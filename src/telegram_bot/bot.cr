@@ -50,13 +50,13 @@ module TelegramBot
 
     # @name username of the bot
     # @token
-    # @whitelist
-    # @blacklist
+    # @allowlist
+    # @blocklist
     # @updates_timeout
     def initialize(@name : String,
                    @token : String,
-                   @whitelist : Array(String)? = nil,
-                   @blacklist : Array(String)? = nil,
+                   @allowlist : Array(String)? = nil,
+                   @blocklist : Array(String)? = nil,
                    @updates_timeout : Int32? = nil,
                    @allowed_updates : Array(String)? = nil)
       @nextoffset = 0
@@ -150,20 +150,20 @@ module TelegramBot
         if mf = msg.from
           from = mf
         else
-          return @whitelist.nil?
+          return @allowlist.nil?
         end
       else
         from = msg.from
       end
 
-      if blacklist = @blacklist
+      if blocklist = @blocklist
         if username = from.username
-          if blacklist.includes?(username)
-            # on the blacklist
-            Log.info { "#{username} blocked because he/she is on the blacklist" }
+          if blocklist.includes?(username)
+            # on the blocklist
+            Log.info { "#{username} blocked because he/she is on the blocklist" }
             return false
           else
-            # not on the blacklist
+            # not on the blocklist
             return true
           end
         else
@@ -172,19 +172,19 @@ module TelegramBot
         end
       end
 
-      if whitelist = @whitelist
+      if allowlist = @allowlist
         if username = from.username
-          if whitelist.includes?(username)
-            # on the whitelist
+          if allowlist.includes?(username)
+            # on the allowlist
             return true
           else
-            # not on the whitelist
-            Log.info { "#{username} blocked because he/she is not on the whitelist" }
+            # not on the allowlist
+            Log.info { "#{username} blocked because he/she is not on the allowlist" }
             return false
           end
         else
           # doesn't have username at all
-          Log.info { "user without username is blocked because whitelist is set" }
+          Log.info { "user without username is blocked because allowlist is set" }
           return false
         end
       end
