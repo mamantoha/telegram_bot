@@ -1,13 +1,11 @@
-require "json"
-
 module TelegramBot
   class Document
-    JSON.mapping({
-      file_id:   String,
-      thumb:     {type: PhotoSize, nilable: true},
-      file_name: {type: String, nilable: true},
-      mime_type: {type: String, nilable: true},
-      file_size: {type: Int32, nilable: true},
-    })
+    include JSON::Serializable
+
+    property file_id : String
+    property thumb : PhotoSize?
+    property file_name : String?
+    property mime_type : String?
+    property file_size : Int32?
   end
 end

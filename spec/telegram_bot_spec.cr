@@ -6,7 +6,7 @@ class TestBot < TelegramBot::Bot
   def initialize
     super "testbot", ""
 
-    cmd "example" do |msg, params|
+    cmd "example" do |msg, _params|
       send_message msg.chat.id, "test"
     end
   end
@@ -14,7 +14,7 @@ end
 
 describe TelegramBot do
   it "works" do
-    test = TestBot.new
+    TestBot.new
   end
 
   it "logs messages" do

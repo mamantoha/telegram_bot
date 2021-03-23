@@ -1,24 +1,40 @@
-require "json"
-
 module TelegramBot
   class InlineQueryResultVideo < InlineQueryResult
-    FIELDS = {
-      type:                  {type: String, mustbe: "video"},
-      id:                    String,
-      video_url:             String,
-      mime_type:             String,
-      thumb_url:             String,
-      title:                 String,
-      caption:               {type: String, nilable: true},
-      video_width:           {type: Int32, nilable: true},
-      video_height:          {type: Int32, nilable: true},
-      video_duration:        {type: Int32, nilable: true},
-      description:           {type: String, nilable: true},
-      reply_markup:          {type: InlineKeyboardMarkup, nilable: true},
-      input_message_content: {type: InputMessageContent, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String = "video"
+    property id : String
+    property video_url : String
+    # Mime type of the content of video url, "text/html" or "video/mp4"
+    property mime_type : String
+    # URL of the thumbnail (jpeg only) for the video
+    property thumb_url : String
+    property title : String
+    property caption : String?
+    property parse_mode : String?
+    property video_width : Int32?
+    property video_height : Int32?
+    property video_duration : Int32?
+    property description : String?
+    property reply_markup : InlineKeyboardMarkup?
+    property input_message_content : InputMessageContent?
+
+    def initialize(
+      @id : String,
+      @video_url : String,
+      @mime_type : String,
+      @thumb_url : String,
+      @title : String,
+      *,
+      @caption = nil,
+      @parse_mode = nil,
+      @video_width = nil,
+      @video_height = nil,
+      @video_duration = nil,
+      @description = nil,
+      @reply_markup = nil,
+      @input_message_content = nil
+    )
+    end
   end
 end

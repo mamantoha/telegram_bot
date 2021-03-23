@@ -1,5 +1,3 @@
-require "json"
-
 module TelegramBot
   class APIException < Exception
     @data : JSON::Any?

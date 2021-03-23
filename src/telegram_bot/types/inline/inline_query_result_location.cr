@@ -1,22 +1,32 @@
-require "json"
-
 module TelegramBot
   class InlineQueryResultLocation < InlineQueryResult
-    FIELDS = {
-      type:                  {type: String, mustbe: "location"},
-      id:                    String,
-      latitude:              Float64,
-      longitude:             Float64,
-      title:                 String,
-      live_period:           {type: Int32, nilable: true},
-      reply_markup:          {type: InlineKeyboardMarkup, nilable: true},
-      input_message_content: {type: InputMessageContent, nilable: true},
-      thumb_url:             {type: String, nilable: true},
-      thumb_width:           {type: Int32, nilable: true},
-      thumb_height:          {type: Int32, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String = "location"
+    property id : String
+    property latitude : Float64
+    property longitude : Float64
+    property title : String
+    property live_period : Int32?
+    property reply_markup : InlineKeyboardMarkup?
+    property input_message_content : InputMessageContent?
+    property thumb_url : String?
+    property thumb_width : Int32?
+    property thumb_height : Int32?
+
+    def initialize(
+      @id : String,
+      @latitude : Float64,
+      @longitude : Float64,
+      @title : String,
+      *,
+      @live_period = nil,
+      @reply_markup = nil,
+      @input_message_content = nil,
+      @thumb_url = nil,
+      @thumb_width = nil,
+      @thumb_height = nil
+    )
+    end
   end
 end

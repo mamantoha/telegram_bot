@@ -1,16 +1,14 @@
-require "json"
-
 module TelegramBot
   class Sticker
-    JSON.mapping({
-      file_id:       String,
-      width:         Int32,
-      height:        Int32,
-      thumb:         {type: PhotoSize, nilable: true},
-      emoji:         {type: String, nilable: true},
-      set_name:      {type: String, nilable: true},
-      mask_position: {type: MaskPosition, nilable: true},
-      file_size:     {type: Int32, nilable: true},
-    })
+    include JSON::Serializable
+
+    property file_id : String
+    property width : Int32
+    property height : Int32
+    property thumb : PhotoSize?
+    property emoji : String?
+    property set_name : String?
+    property mask_position : MaskPosition?
+    property file_size : Int32?
   end
 end

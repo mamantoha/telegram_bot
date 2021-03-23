@@ -1,10 +1,8 @@
-require "json"
-
 module TelegramBot
   class Location
-    JSON.mapping({
-      longitude: Float64,
-      latitude:  Float64,
-    })
+    include JSON::Serializable
+
+    property longitude : Float64
+    property latitude : Float64
   end
 end

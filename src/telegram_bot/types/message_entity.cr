@@ -1,16 +1,23 @@
-require "json"
-
 module TelegramBot
   class MessageEntity
-    FIELDS = {
-      type:   String,
-      offset: Int32,
-      length: Int32,
-      url:    {type: String, nilable: true},
-      user:   {type: User, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String
+    property offset : Int32
+    property length : Int32
+    property url : String?
+    property user : User?
+    property language : User?
+
+    def initialize(
+      @type : String,
+      @offset : Int32,
+      @length : Int32,
+      *,
+      @url = nil,
+      @user = nil,
+      @language = nil
+    )
+    end
   end
 end

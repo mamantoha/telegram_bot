@@ -1,10 +1,8 @@
-require "json"
-
 module TelegramBot
   class LabeledPrice
-    JSON.mapping({
-      label:  String,
-      amount: Int32,
-    })
+    include JSON::Serializable
+
+    property label : String
+    property amount : Int32
   end
 end

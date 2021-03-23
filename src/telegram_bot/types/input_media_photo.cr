@@ -1,11 +1,10 @@
-require "json"
-
 module TelegramBot
   class InputMediaPhoto < InputMedia
-    JSON.mapping({
-      type:    String,
-      media:   String,
-      caption: {type: String, nilable: true},
-    })
+    include JSON::Serializable
+
+    property type : String
+    property media : String
+    property caption : String?
+    property parse_mode : String?
   end
 end

@@ -1,16 +1,20 @@
-require "json"
-
 module TelegramBot
   class InlineQueryResultCachedAudio < InlineQueryResult
-    FIELDS = {
-      type:                  {type: String, mustbe: "audio"},
-      id:                    String,
-      audio_file_id:         String,
-      reply_markup:          {type: InlineKeyboardMarkup, nilable: true},
-      input_message_content: {type: InputMessageContent, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String = "audio"
+    property id : String
+    property audio_file_id : String
+    property reply_markup : InlineKeyboardMarkup?
+    property input_message_content : InputMessageContent?
+
+    def initialize(
+      @id : String,
+      @audio_file_id : String,
+      *,
+      @reply_markup = nil,
+      @input_message_content = nil
+    )
+    end
   end
 end
