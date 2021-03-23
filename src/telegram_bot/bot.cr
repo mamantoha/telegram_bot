@@ -198,10 +198,10 @@ module TelegramBot
                  HttpClient.new(@token)
                end
 
-      response = if params.values.any?(&.is_a?(::IO::FileDescriptor))
+      response = if params.values.any?(::IO::FileDescriptor)
                    multipart_params = HTTP::Client::MultipartBody.new(params)
                    client.post_multipart method, multipart_params
-                 elsif params.any?
+                 elsif !params.empty?
                    stringified_params = params.reduce(Hash(String, String).new) { |h, (k, v)| h[k] = v.to_s; h }
                    client.post_form method, stringified_params
                  else
@@ -651,7 +651,7 @@ module TelegramBot
                             switch_pm_text : String? = nil,
                             switch_pm_parameter : String? = nil) : Bool?
       # results   Array of InlineQueryResult  Yes   A JSON-serialized array of results for the inline query
-      results = "[" + results.join(", ") { |a| a.to_json } + "]"
+      results = "[" + results.join(", ", &.to_json) + "]"
       res = def_request "answerInlineQuery", inline_query_id, cache_time, is_personal, next_offset, results, switch_pm_text, switch_pm_parameter
       res.as_bool if res
     end
@@ -830,7 +830,7 @@ module TelegramBot
 
     # Change the list of the bot's commands.
     def set_my_commands(commands : Array(BotCommand))
-      commands = "[" + commands.join(", ") { |c| c.to_json } + "]"
+      commands = "[" + commands.join(", ", &.to_json) + "]"
       res = def_request "setMyCommands", commands
       res.as_bool if res
     end
