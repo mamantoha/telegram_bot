@@ -1,3 +1,3 @@
 module TelegramBot
-  VERSION = "0.2.2"
+  VERSION = {{ `shards version #{__DIR__}`.chomp.stringify }}
 end
