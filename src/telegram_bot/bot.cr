@@ -70,9 +70,7 @@ module TelegramBot
       @running = true
       while @running
         begin
-          puts "<<< GET UPDATES"
           updates = get_updates
-          puts "GET UPDATES"
           updates.each do |u|
             spawn handle_update(u)
           end
