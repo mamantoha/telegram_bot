@@ -207,6 +207,7 @@ module TelegramBot
                  else
                    client.post method
                  end
+      client.close
 
       return nil if response.nil?
       handle_http_response(response)

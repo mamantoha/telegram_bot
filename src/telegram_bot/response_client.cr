@@ -15,7 +15,6 @@ module TelegramBot
 
       @response.content_type = "application/x-www-form-urlencoded"
       @response.print(body)
-      @response.close
       nil
     end
 
@@ -23,8 +22,11 @@ module TelegramBot
       multipart_body.add_part("method", method)
       @response.content_type = "multipart/form-data; boundary=#{multipart_body.boundary}"
       @response.print(multipart_body.bodyg)
-      @response.close
       nil
+    end
+
+    def close
+      @response.close
     end
   end
 end
