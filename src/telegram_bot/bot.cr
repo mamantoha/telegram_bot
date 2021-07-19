@@ -70,7 +70,9 @@ module TelegramBot
       @running = true
       while @running
         begin
+          puts "<<< GET UPDATES"
           updates = get_updates
+          puts "GET UPDATES"
           updates.each do |u|
             spawn handle_update(u)
           end
@@ -207,6 +209,7 @@ module TelegramBot
                  else
                    client.post method
                  end
+      client.close
 
       return nil if response.nil?
       handle_http_response(response)
