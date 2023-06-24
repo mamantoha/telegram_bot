@@ -2,7 +2,7 @@ module TelegramBot
   class User
     include JSON::Serializable
 
-    property id : Int32
+    property id : Int64
     property is_bot : Bool
     property first_name : String
     property last_name : String?
@@ -13,7 +13,7 @@ module TelegramBot
     property supports_inline_queries : Bool?
 
     def initialize(
-      @id : Int32,
+      @id : Int64,
       @is_bot : Bool,
       @first_name : String,
       *,
