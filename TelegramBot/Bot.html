@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.9.2">
+<meta name="crystal_docs.project_version" content="0.5.0">
+<meta name="crystal_docs.project_name" content="telegram_bot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="telegram_bot">
+  <title>TelegramBot::Bot - telegram_bot 0.5.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          telegram_bot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.5.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="telegram_bot/Fiber" data-name="fiber">
+      <a href="../Fiber.html">Fiber</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="telegram_bot/TelegramBot" data-name="telegrambot">
+      <a href="../TelegramBot.html">TelegramBot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Animation" data-name="telegrambot::animation">
+      <a href="../TelegramBot/Animation.html">Animation</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/APIException" data-name="telegrambot::apiexception">
+      <a href="../TelegramBot/APIException.html">APIException</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Audio" data-name="telegrambot::audio">
+      <a href="../TelegramBot/Audio.html">Audio</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="telegram_bot/TelegramBot/Bot" data-name="telegrambot::bot">
+      <a href="../TelegramBot/Bot.html">Bot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Bot/ReplyMarkup" data-name="telegrambot::bot::replymarkup">
+      <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/BotCommand" data-name="telegrambot::botcommand">
+      <a href="../TelegramBot/BotCommand.html">BotCommand</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CallbackGame" data-name="telegrambot::callbackgame">
+      <a href="../TelegramBot/CallbackGame.html">CallbackGame</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CallbackQuery" data-name="telegrambot::callbackquery">
+      <a href="../TelegramBot/CallbackQuery.html">CallbackQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Chat" data-name="telegrambot::chat">
+      <a href="../TelegramBot/Chat.html">Chat</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChatMember" data-name="telegrambot::chatmember">
+      <a href="../TelegramBot/ChatMember.html">ChatMember</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChatPhoto" data-name="telegrambot::chatphoto">
+      <a href="../TelegramBot/ChatPhoto.html">ChatPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChosenInlineResult" data-name="telegrambot::choseninlineresult">
+      <a href="../TelegramBot/ChosenInlineResult.html">ChosenInlineResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CmdHandler" data-name="telegrambot::cmdhandler">
+      <a href="../TelegramBot/CmdHandler.html">CmdHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Contact" data-name="telegrambot::contact">
+      <a href="../TelegramBot/Contact.html">Contact</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Document" data-name="telegrambot::document">
+      <a href="../TelegramBot/Document.html">Document</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/File" data-name="telegrambot::file">
+      <a href="../TelegramBot/File.html">File</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ForceReply" data-name="telegrambot::forcereply">
+      <a href="../TelegramBot/ForceReply.html">ForceReply</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Game" data-name="telegrambot::game">
+      <a href="../TelegramBot/Game.html">Game</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/GameHighScore" data-name="telegrambot::gamehighscore">
+      <a href="../TelegramBot/GameHighScore.html">GameHighScore</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/HttpClient" data-name="telegrambot::httpclient">
+      <a href="../TelegramBot/HttpClient.html">HttpClient</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineKeyboardButton" data-name="telegrambot::inlinekeyboardbutton">
+      <a href="../TelegramBot/InlineKeyboardButton.html">InlineKeyboardButton</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineKeyboardMarkup" data-name="telegrambot::inlinekeyboardmarkup">
+      <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQuery" data-name="telegrambot::inlinequery">
+      <a href="../TelegramBot/InlineQuery.html">InlineQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResult" data-name="telegrambot::inlinequeryresult">
+      <a href="../TelegramBot/InlineQueryResult.html">InlineQueryResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultArticle" data-name="telegrambot::inlinequeryresultarticle">
+      <a href="../TelegramBot/InlineQueryResultArticle.html">InlineQueryResultArticle</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultAudio" data-name="telegrambot::inlinequeryresultaudio">
+      <a href="../TelegramBot/InlineQueryResultAudio.html">InlineQueryResultAudio</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedAudio" data-name="telegrambot::inlinequeryresultcachedaudio">
+      <a href="../TelegramBot/InlineQueryResultCachedAudio.html">InlineQueryResultCachedAudio</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedDocument" data-name="telegrambot::inlinequeryresultcacheddocument">
+      <a href="../TelegramBot/InlineQueryResultCachedDocument.html">InlineQueryResultCachedDocument</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedGif" data-name="telegrambot::inlinequeryresultcachedgif">
+      <a href="../TelegramBot/InlineQueryResultCachedGif.html">InlineQueryResultCachedGif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedMpeg4Gif" data-name="telegrambot::inlinequeryresultcachedmpeg4gif">
+      <a href="../TelegramBot/InlineQueryResultCachedMpeg4Gif.html">InlineQueryResultCachedMpeg4Gif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedPhoto" data-name="telegrambot::inlinequeryresultcachedphoto">
+      <a href="../TelegramBot/InlineQueryResultCachedPhoto.html">InlineQueryResultCachedPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedSticker" data-name="telegrambot::inlinequeryresultcachedsticker">
+      <a href="../TelegramBot/InlineQueryResultCachedSticker.html">InlineQueryResultCachedSticker</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedVideo" data-name="telegrambot::inlinequeryresultcachedvideo">
+      <a href="../TelegramBot/InlineQueryResultCachedVideo.html">InlineQueryResultCachedVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedVoice" data-name="telegrambot::inlinequeryresultcachedvoice">
+      <a href="../TelegramBot/InlineQueryResultCachedVoice.html">InlineQueryResultCachedVoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultContact" data-name="telegrambot::inlinequeryresultcontact">
+      <a href="../TelegramBot/InlineQueryResultContact.html">InlineQueryResultContact</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultDocument" data-name="telegrambot::inlinequeryresultdocument">
+      <a href="../TelegramBot/InlineQueryResultDocument.html">InlineQueryResultDocument</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultGif" data-name="telegrambot::inlinequeryresultgif">
+      <a href="../TelegramBot/InlineQueryResultGif.html">InlineQueryResultGif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultLocation" data-name="telegrambot::inlinequeryresultlocation">
+      <a href="../TelegramBot/InlineQueryResultLocation.html">InlineQueryResultLocation</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultMpeg4Gif" data-name="telegrambot::inlinequeryresultmpeg4gif">
+      <a href="../TelegramBot/InlineQueryResultMpeg4Gif.html">InlineQueryResultMpeg4Gif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultPhoto" data-name="telegrambot::inlinequeryresultphoto">
+      <a href="../TelegramBot/InlineQueryResultPhoto.html">InlineQueryResultPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVenue" data-name="telegrambot::inlinequeryresultvenue">
+      <a href="../TelegramBot/InlineQueryResultVenue.html">InlineQueryResultVenue</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVideo" data-name="telegrambot::inlinequeryresultvideo">
+      <a href="../TelegramBot/InlineQueryResultVideo.html">InlineQueryResultVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVoice" data-name="telegrambot::inlinequeryresultvoice">
+      <a href="../TelegramBot/InlineQueryResultVoice.html">InlineQueryResultVoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputContactMessageContent" data-name="telegrambot::inputcontactmessagecontent">
+      <a href="../TelegramBot/InputContactMessageContent.html">InputContactMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputLocationMessageContent" data-name="telegrambot::inputlocationmessagecontent">
+      <a href="../TelegramBot/InputLocationMessageContent.html">InputLocationMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMedia" data-name="telegrambot::inputmedia">
+      <a href="../TelegramBot/InputMedia.html">InputMedia</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMediaPhoto" data-name="telegrambot::inputmediaphoto">
+      <a href="../TelegramBot/InputMediaPhoto.html">InputMediaPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMediaVideo" data-name="telegrambot::inputmediavideo">
+      <a href="../TelegramBot/InputMediaVideo.html">InputMediaVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMessageContent" data-name="telegrambot::inputmessagecontent">
+      <a href="../TelegramBot/InputMessageContent.html">InputMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputTextMessageContent" data-name="telegrambot::inputtextmessagecontent">
+      <a href="../TelegramBot/InputTextMessageContent.html">InputTextMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputVenueMessageContent" data-name="telegrambot::inputvenuemessagecontent">
+      <a href="../TelegramBot/InputVenueMessageContent.html">InputVenueMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Invoice" data-name="telegrambot::invoice">
+      <a href="../TelegramBot/Invoice.html">Invoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/KeyboardButton" data-name="telegrambot::keyboardbutton">
+      <a href="../TelegramBot/KeyboardButton.html">KeyboardButton</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/LabeledPrice" data-name="telegrambot::labeledprice">
+      <a href="../TelegramBot/LabeledPrice.html">LabeledPrice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Location" data-name="telegrambot::location">
+      <a href="../TelegramBot/Location.html">Location</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/MaskPosition" data-name="telegrambot::maskposition">
+      <a href="../TelegramBot/MaskPosition.html">MaskPosition</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Message" data-name="telegrambot::message">
+      <a href="../TelegramBot/Message.html">Message</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/MessageEntity" data-name="telegrambot::messageentity">
+      <a href="../TelegramBot/MessageEntity.html">MessageEntity</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/OrderInfo" data-name="telegrambot::orderinfo">
+      <a href="../TelegramBot/OrderInfo.html">OrderInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/PhotoSize" data-name="telegrambot::photosize">
+      <a href="../TelegramBot/PhotoSize.html">PhotoSize</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/PreCheckoutQuery" data-name="telegrambot::precheckoutquery">
+      <a href="../TelegramBot/PreCheckoutQuery.html">PreCheckoutQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ReplyKeyboardMarkup" data-name="telegrambot::replykeyboardmarkup">
+      <a href="../TelegramBot/ReplyKeyboardMarkup.html">ReplyKeyboardMarkup</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ReplyKeyboardRemove" data-name="telegrambot::replykeyboardremove">
+      <a href="../TelegramBot/ReplyKeyboardRemove.html">ReplyKeyboardRemove</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ResponseClient" data-name="telegrambot::responseclient">
+      <a href="../TelegramBot/ResponseClient.html">ResponseClient</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingAddress" data-name="telegrambot::shippingaddress">
+      <a href="../TelegramBot/ShippingAddress.html">ShippingAddress</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingOption" data-name="telegrambot::shippingoption">
+      <a href="../TelegramBot/ShippingOption.html">ShippingOption</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingQuery" data-name="telegrambot::shippingquery">
+      <a href="../TelegramBot/ShippingQuery.html">ShippingQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Sticker" data-name="telegrambot::sticker">
+      <a href="../TelegramBot/Sticker.html">Sticker</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/StickerSet" data-name="telegrambot::stickerset">
+      <a href="../TelegramBot/StickerSet.html">StickerSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/SuccessfulPayment" data-name="telegrambot::successfulpayment">
+      <a href="../TelegramBot/SuccessfulPayment.html">SuccessfulPayment</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Update" data-name="telegrambot::update">
+      <a href="../TelegramBot/Update.html">Update</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/User" data-name="telegrambot::user">
+      <a href="../TelegramBot/User.html">User</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/UserProfilePhoto" data-name="telegrambot::userprofilephoto">
+      <a href="../TelegramBot/UserProfilePhoto.html">UserProfilePhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Venue" data-name="telegrambot::venue">
+      <a href="../TelegramBot/Venue.html">Venue</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Video" data-name="telegrambot::video">
+      <a href="../TelegramBot/Video.html">Video</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/VideoNote" data-name="telegrambot::videonote">
+      <a href="../TelegramBot/VideoNote.html">VideoNote</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Voice" data-name="telegrambot::voice">
+      <a href="../TelegramBot/Voice.html">Voice</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">abstract class</span> TelegramBot::<wbr>Bot
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../TelegramBot/Bot.html">TelegramBot::Bot</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      telegram_bot/bot.cr
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Log">
+        <strong>Log</strong> = <code><span class="t">::</span><span class="t">Log</span>.<span class="k">for</span>(<span class="k">self</span>)</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28name%3AString%2Ctoken%3AString%2Callowlist%3AArray%28String%29%7CNil%3Dnil%2Cblocklist%3AArray%28String%29%7CNil%3Dnil%2Cupdates_timeout%3AInt32%7CNil%3Dnil%2Callowed_updates%3AArray%28String%29%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, token : String, allowlist : Array(String) | Nil = <span class="n">nil</span>, blocklist : Array(String) | Nil = <span class="n">nil</span>, updates_timeout : Int32 | Nil = <span class="n">nil</span>, allowed_updates : Array(String) | Nil = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>@name username of the bot @token @allowlist @blocklist @updates_timeout</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#add_sticker_to_set%28user_id%3AInt%2Cname%3AString%2Cpng_sticker%3A%3A%3AFile%7CString%2Cemojis%3AString%2Cmask_position%3AMaskPosition%7CNil%3Dnil%29-instance-method" class="signature"><strong>#add_sticker_to_set</strong>(user_id : Int, name : String, png_sticker : ::File | String, emojis : String, mask_position : MaskPosition | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#answer_callback_query%28callback_query_id%3AString%2Ctext%3AString%7CNil%3Dnil%2Cshow_alert%3ABool%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Ccache_time%3AInt32%7CNil%3Dnil%29-instance-method" class="signature"><strong>#answer_callback_query</strong>(callback_query_id : String, text : String | Nil = <span class="n">nil</span>, show_alert : Bool | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, cache_time : Int32 | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#answer_inline_query%28inline_query_id%3AString%2Cresults%3AArray%28InlineQueryResult%29%2Ccache_time%3AInt32%7CNil%3Dnil%2Cis_personal%3ABool%7CNil%3Dnil%2Cnext_offset%3AString%7CNil%3Dnil%2Cswitch_pm_text%3AString%7CNil%3Dnil%2Cswitch_pm_parameter%3AString%7CNil%3Dnil%29%3ABool%7CNil-instance-method" class="signature"><strong>#answer_inline_query</strong>(inline_query_id : String, results : Array(InlineQueryResult), cache_time : Int32 | Nil = <span class="n">nil</span>, is_personal : Bool | Nil = <span class="n">nil</span>, next_offset : String | Nil = <span class="n">nil</span>, switch_pm_text : String | Nil = <span class="n">nil</span>, switch_pm_parameter : String | Nil = <span class="n">nil</span>) : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#answer_pre_checkout_query%28pre_checkout_query_id%3AString%2Cok%3ABool%2Cerror_message%3AString%7CNil%3Dnil%29%3ABool%7CMessage%7CNil-instance-method" class="signature"><strong>#answer_pre_checkout_query</strong>(pre_checkout_query_id : String, ok : Bool, error_message : String | Nil = <span class="n">nil</span>) : Bool | Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#answer_shipping_query%28shipping_query_id%3AString%2Cok%3ABool%2Cshipping_option%3AArray%28ShippingOption%29%7CNil%3Dnil%2Cerror_message%3AString%7CNil%3Dnil%29%3ABool%7CMessage%7CNil-instance-method" class="signature"><strong>#answer_shipping_query</strong>(shipping_query_id : String, ok : Bool, shipping_option : Array(ShippingOption) | Nil = <span class="n">nil</span>, error_message : String | Nil = <span class="n">nil</span>) : Bool | Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#create_new_sticker_set%28user_id%3AInt%2Cname%3AString%2Ctitle%3AString%2Cpng_sticker%3A%3A%3AFile%7CString%2Cemojis%3AString%2Ccontains_masks%3ABool%7CNil%3Dnil%2Cmask_position%3AMaskPosition%7CNil%3Dnil%29-instance-method" class="signature"><strong>#create_new_sticker_set</strong>(user_id : Int, name : String, title : String, png_sticker : ::File | String, emojis : String, contains_masks : Bool | Nil = <span class="n">nil</span>, mask_position : MaskPosition | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_chat_photo%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#delete_chat_photo</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_chat_sticker_set%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#delete_chat_sticker_set</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt32%29%3AMessage%7CBool%7CNil-instance-method" class="signature"><strong>#delete_message</strong>(chat_id : Int | String, message_id : Int32) : Message | Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_sticker_position_in_set%28sticker%3AString%29-instance-method" class="signature"><strong>#delete_sticker_position_in_set</strong>(sticker : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_webhook%3ABool%7CNil-instance-method" class="signature"><strong>#delete_webhook</strong> : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#download%28file%3AFile%29-instance-method" class="signature"><strong>#download</strong>(file : File)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#download%28file_path%3AString%29-instance-method" class="signature"><strong>#download</strong>(file_path : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#download%28media%29-instance-method" class="signature"><strong>#download</strong>(media)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_message_caption%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Ccaption%3AString%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method" class="signature"><strong>#edit_message_caption</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, caption : String | Nil = <span class="n">nil</span>, reply_markup : InlineKeyboardMarkup | Nil = <span class="n">nil</span>) : Message | Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_message_live_location%28latitude%3AFloat%2Clongitude%3AFloat%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29-instance-method" class="signature"><strong>#edit_message_live_location</strong>(latitude : Float, longitude : Float, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_message_reply_markup%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method" class="signature"><strong>#edit_message_reply_markup</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : InlineKeyboardMarkup | Nil = <span class="n">nil</span>) : Message | Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_message_text%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Ctext%3AString%7CNil%3Dnil%2Cparse_mode%3AString%7CNil%3Dnil%2Cdisable_web_page_preview%3ABool%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method" class="signature"><strong>#edit_message_text</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, text : String | Nil = <span class="n">nil</span>, parse_mode : String | Nil = <span class="n">nil</span>, disable_web_page_preview : Bool | Nil = <span class="n">nil</span>, reply_markup : InlineKeyboardMarkup | Nil = <span class="n">nil</span>) : Message | Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#export_chat_invite_link%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#export_chat_invite_link</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_message%28chat_id%3AInt%7CString%2Cfrom_chat_id%3AInt%7CString%2Cmessage_id%3AInt32%2Cdisable_notification%3ABool%7CNil%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#forward_message</strong>(chat_id : Int | String, from_chat_id : Int | String, message_id : Int32, disable_notification : Bool | Nil = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_chat%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#get_chat</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_chat_administrators%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#get_chat_administrators</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt32%29-instance-method" class="signature"><strong>#get_chat_member</strong>(chat_id : Int | String, user_id : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_chat_members_count%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#get_chat_members_count</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_file%28file_id%3AString%29%3AFile-instance-method" class="signature"><strong>#get_file</strong>(file_id : String) : File</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_game_high_scores%28user_id%3AInt32%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%29%3AArray%28GameHighScore%29-instance-method" class="signature"><strong>#get_game_high_scores</strong>(user_id : Int32, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>) : Array(GameHighScore)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_me-instance-method" class="signature"><strong>#get_me</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_my_commands%3AArray%28BotCommand%29-instance-method" class="signature"><strong>#get_my_commands</strong> : Array(BotCommand)</a>
+        
+          <div class="summary"><p>Get the current list of the bot's commands.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_sticker_set%28name%3AString%29-instance-method" class="signature"><strong>#get_sticker_set</strong>(name : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_user_profile_photos%28user_id%3AInt32%2Coffset%3AInt32%7CNil%3Dnil%2Climit%3AInt32%7CNil%3Dnil%29-instance-method" class="signature"><strong>#get_user_profile_photos</strong>(user_id : Int32, offset : Int32 | Nil = <span class="n">nil</span>, limit : Int32 | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle%28message%3AMessage%29-instance-method" class="signature"><strong>#handle</strong>(message : Message)</a>
+        
+          <div class="summary"><p>handle messages</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle%28inline_query%3AInlineQuery%29-instance-method" class="signature"><strong>#handle</strong>(inline_query : InlineQuery)</a>
+        
+          <div class="summary"><p>handle inline query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle%28chosen_inline_result%3AChosenInlineResult%29-instance-method" class="signature"><strong>#handle</strong>(chosen_inline_result : ChosenInlineResult)</a>
+        
+          <div class="summary"><p>handle chosen inlien query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle%28callback_query%3ACallbackQuery%29-instance-method" class="signature"><strong>#handle</strong>(callback_query : CallbackQuery)</a>
+        
+          <div class="summary"><p>handle callback query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle_channel_post%28message%3AMessage%29-instance-method" class="signature"><strong>#handle_channel_post</strong>(message : Message)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle_edited%28message%3AMessage%29-instance-method" class="signature"><strong>#handle_edited</strong>(message : Message)</a>
+        
+          <div class="summary"><p>handle edited messages</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle_edited_channel_post%28message%3AMessage%29-instance-method" class="signature"><strong>#handle_edited_channel_post</strong>(message : Message)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#handle_update%28u%29-instance-method" class="signature"><strong>#handle_update</strong>(u)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#kick_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Cuntil_date%3AInt%7CNil%3Dnil%29-instance-method" class="signature"><strong>#kick_chat_member</strong>(chat_id : Int | String, user_id : Int, until_date : Int | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#leave_chat%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#leave_chat</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pin_chat_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt32%2Cdisable_notification%3ABool%7CNil%29-instance-method" class="signature"><strong>#pin_chat_message</strong>(chat_id : Int | String, message_id : Int32, disable_notification : Bool | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pin_chat_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt%2Cdisable_notification%3ABool%7CNil%3Dnil%29-instance-method" class="signature"><strong>#pin_chat_message</strong>(chat_id : Int | String, message_id : Int, disable_notification : Bool | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#polling-instance-method" class="signature"><strong>#polling</strong></a>
+        
+          <div class="summary"><p>run long polling in a loop and call handlers for messages</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#promote_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Ccan_change_info%3ABool%7CNil%3Dnil%2Ccan_post_messages%3ABool%7CNil%3Dnil%2Ccan_edit_messages%3ABool%7CNil%3Dnil%2Ccan_delete_messages%3ABool%7CNil%3Dnil%2Ccan_invite_users%3ABool%7CNil%3Dnil%2Ccan_restrict_members%3ABool%7CNil%3Dnil%2Ccan_pin_messages%3ABool%7CNil%3Dnil%2Ccan_promote_members%3ABool%7CNil%3Dnil%29-instance-method" class="signature"><strong>#promote_chat_member</strong>(chat_id : Int | String, user_id : Int, can_change_info : Bool | Nil = <span class="n">nil</span>, can_post_messages : Bool | Nil = <span class="n">nil</span>, can_edit_messages : Bool | Nil = <span class="n">nil</span>, can_delete_messages : Bool | Nil = <span class="n">nil</span>, can_invite_users : Bool | Nil = <span class="n">nil</span>, can_restrict_members : Bool | Nil = <span class="n">nil</span>, can_pin_messages : Bool | Nil = <span class="n">nil</span>, can_promote_members : Bool | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reply%28message%3AMessage%2Ctext%3AString%29%3AMessage%7CNil-instance-method" class="signature"><strong>#reply</strong>(message : Message, text : String) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#restrict_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Cuntil_date%3AInt%7CNil%3Dnil%2Ccan_send_messages%3ABool%7CNil%3Dnil%2Ccan_send_media_messages%3ABool%7CNil%3Dnil%2Ccan_send_other_messages%3ABool%7CNil%3Dnil%2Ccan_add_web_page_previews%3ABool%7CNil%3Dnil%29-instance-method" class="signature"><strong>#restrict_chat_member</strong>(chat_id : Int | String, user_id : Int, until_date : Int | Nil = <span class="n">nil</span>, can_send_messages : Bool | Nil = <span class="n">nil</span>, can_send_media_messages : Bool | Nil = <span class="n">nil</span>, can_send_other_messages : Bool | Nil = <span class="n">nil</span>, can_add_web_page_previews : Bool | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_audio%28chat_id%3AInt%7CString%2Caudio%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cperformer%3AString%7CNil%3Dnil%2Ctitle%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_audio</strong>(chat_id : Int | String, audio : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, performer : String | Nil = <span class="n">nil</span>, title : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_chat_action%28chat_id%3AInt%7CString%2Caction%3AString%29-instance-method" class="signature"><strong>#send_chat_action</strong>(chat_id : Int | String, action : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_contact%28chat_id%3AInt%7CString%2Cphone_number%3AString%2Cfirst_name%3AString%2Clast_name%3AString%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_contact</strong>(chat_id : Int | String, phone_number : String, first_name : String, last_name : String | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_document%28chat_id%3AInt%7CString%2Cdocument%3A%3A%3AFile%7CString%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_document</strong>(chat_id : Int | String, document : ::File | String, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_game%28chat_id%3AInt%7CString%2Cgame_short_name%3AString%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_game</strong>(chat_id : Int | String, game_short_name : String, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : InlineKeyboardMarkup | Nil = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_invoice%28chat_id%3AInt%2Ctilte%3AString%2Cdescription%3AString%2Cpayload%3AString%2Cprovider_token%3AString%2Cstart_parameter%3AString%2Ccurrency%3AString%2Cprices%3AArray%28LabeledPrice%29%2Cprovider_data%3AString%7CNil%3Dnil%2Cphoto_url%3AString%7CNil%3Dnil%2Cphoto_size%3AInt32%7CNil%3Dnil%2Cphoto_width%3AInt32%7CNil%3Dnil%2Cphoto_height%3AInt32%7CNil%3Dnil%2Cneed_name%3ABool%7CNil%3Dnil%2Cneed_phone_number%3ABool%7CNil%3Dnil%2Cneed_email%3ABool%7CNil%3Dnil%2Cneed_shipping_address%3ABool%7CNil%3Dnil%2Cis_flexible%3ABool%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_invoice</strong>(chat_id : Int, tilte : String, description : String, payload : String, provider_token : String, start_parameter : String, currency : String, prices : Array(LabeledPrice), provider_data : String | Nil = <span class="n">nil</span>, photo_url : String | Nil = <span class="n">nil</span>, photo_size : Int32 | Nil = <span class="n">nil</span>, photo_width : Int32 | Nil = <span class="n">nil</span>, photo_height : Int32 | Nil = <span class="n">nil</span>, need_name : Bool | Nil = <span class="n">nil</span>, need_phone_number : Bool | Nil = <span class="n">nil</span>, need_email : Bool | Nil = <span class="n">nil</span>, need_shipping_address : Bool | Nil = <span class="n">nil</span>, is_flexible : Bool | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_location%28chat_id%3AInt%7CString%2Clatitude%3AFloat%2Clongitude%3AFloat%2Clive_period%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_location</strong>(chat_id : Int | String, latitude : Float, longitude : Float, live_period : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_media_group%28chat_id%3AInt%7CString%2Cmedia%3AArray%28InputMedia%29%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_media_group</strong>(chat_id : Int | String, media : Array(InputMedia), disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_message%28chat_id%3AInt%7CString%2Ctext%3AString%2Cparse_mode%3AString%7CNil%3Dnil%2Cdisable_web_page_preview%3ABool%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_message</strong>(chat_id : Int | String, text : String, parse_mode : String | Nil = <span class="n">nil</span>, disable_web_page_preview : Bool | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_photo%28chat_id%3AInt%7CString%2Cphoto%3A%3A%3AFile%7CString%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_photo</strong>(chat_id : Int | String, photo : ::File | String, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+          <div class="summary"><p>@photo file or file id</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_sticker%28chat_id%3AInt%7CString%2Csticker%3A%3A%3AFile%7CString%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_sticker</strong>(chat_id : Int | String, sticker : ::File | String, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_venue%28chat_id%3AInt%7CString%2Clatitude%3AFloat%2Clongitude%3AFloat%2Ctitle%3AString%2Caddress%3AString%2Cforsquare_id%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_venue</strong>(chat_id : Int | String, latitude : Float, longitude : Float, title : String, address : String, forsquare_id : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup | Nil = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_video%28chat_id%3AInt%7CString%2Cvideo%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cwidth%3AInt32%7CNil%3Dnil%2Cheight%3AInt32%7CNil%3Dnil%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_video</strong>(chat_id : Int | String, video : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, width : Int32 | Nil = <span class="n">nil</span>, height : Int32 | Nil = <span class="n">nil</span>, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_video_note%28chat_id%3AInt%7CString%2Cvideo_note%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Clength%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_video_note</strong>(chat_id : Int | String, video_note : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, length : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_voice%28chat_id%3AInt%7CString%2Cvoice%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method" class="signature"><strong>#send_voice</strong>(chat_id : Int | String, voice : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup = <span class="n">nil</span>) : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#serve%28bind_address%3AString%3D%22127.0.0.1%22%2Cbind_port%3AInt32%3D80%2Cssl_certificate_path%3AString%7CNil%3Dnil%2Cssl_key_path%3AString%7CNil%3Dnil%29-instance-method" class="signature"><strong>#serve</strong>(bind_address : String = <span class="s">&quot;127.0.0.1&quot;</span>, bind_port : Int32 = <span class="n">80</span>, ssl_certificate_path : String | Nil = <span class="n">nil</span>, ssl_key_path : String | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_chat_description%28chat_id%3AInt%7CString%2Cdescription%3AString%29-instance-method" class="signature"><strong>#set_chat_description</strong>(chat_id : Int | String, description : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_chat_photo%28chat_id%3AInt%7CString%2Cphoto%3A%3A%3AFile%29-instance-method" class="signature"><strong>#set_chat_photo</strong>(chat_id : Int | String, photo : ::File)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_chat_sticker_set%28chat_id%3AInt%7CString%2Csticker_set_name%3AString%29-instance-method" class="signature"><strong>#set_chat_sticker_set</strong>(chat_id : Int | String, sticker_set_name : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_chat_title%28chat_id%3AInt%7CString%2Ctitle%3AString%29-instance-method" class="signature"><strong>#set_chat_title</strong>(chat_id : Int | String, title : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_game_score%28user_id%3AInt32%2Cscore%3AInt32%2Cforce%3ABool%7CNil%3Dnil%2Cdisable_edit_message%3ABool%7CNil%3Dnil%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method" class="signature"><strong>#set_game_score</strong>(user_id : Int32, score : Int32, force : Bool | Nil = <span class="n">nil</span>, disable_edit_message : Bool | Nil = <span class="n">nil</span>, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>) : Message | Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_my_commands%28commands%3AArray%28BotCommand%29%29-instance-method" class="signature"><strong>#set_my_commands</strong>(commands : Array(BotCommand))</a>
+        
+          <div class="summary"><p>Change the list of the bot's commands.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_sticker_position_in_set%28sticker%3AString%2Cposition%3AInt%29-instance-method" class="signature"><strong>#set_sticker_position_in_set</strong>(sticker : String, position : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_webhook%28url%3AString%2Ccertificate%3A%3A%3AFile%7CString%7CNil%3Dnil%2Cmax_connections%3AInt32%7CNil%3Dnil%2Callowed_updates%3AArray%28String%29%7CNil%3D%40allowed_updates%29-instance-method" class="signature"><strong>#set_webhook</strong>(url : String, certificate : ::File | String | Nil = <span class="n">nil</span>, max_connections : Int32 | Nil = <span class="n">nil</span>, allowed_updates : Array(String) | Nil = @allowed_updates)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stop-instance-method" class="signature"><strong>#stop</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stop_message_live_location%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29-instance-method" class="signature"><strong>#stop_message_live_location</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : ReplyMarkup | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unban_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt32%29-instance-method" class="signature"><strong>#unban_chat_member</strong>(chat_id : Int | String, user_id : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#unpin_chat_message%28chat_id%3AInt%7CString%29-instance-method" class="signature"><strong>#unpin_chat_message</strong>(chat_id : Int | String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#upload_sticker_file%28user_id%3AInt%2Cpng_sticker%3A%3A%3AFile%29-instance-method" class="signature"><strong>#upload_sticker_file</strong>(user_id : Int, png_sticker : ::File)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="macro-summary" class="anchor" href="#macro-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#def_force_request%28name%2C%2Aargs%29-macro" class="signature"><strong>def_force_request</strong>(name, *args)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#def_request%28name%2C%2Aargs%29-macro" class="signature"><strong>def_request</strong>(name, *args)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(name:String,token:String,allowlist:Array(String)|Nil=nil,blocklist:Array(String)|Nil=nil,updates_timeout:Int32|Nil=nil,allowed_updates:Array(String)|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name : String, token : String, allowlist : Array(String) | Nil = <span class="n">nil</span>, blocklist : Array(String) | Nil = <span class="n">nil</span>, updates_timeout : Int32 | Nil = <span class="n">nil</span>, allowed_updates : Array(String) | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28name%3AString%2Ctoken%3AString%2Callowlist%3AArray%28String%29%7CNil%3Dnil%2Cblocklist%3AArray%28String%29%7CNil%3Dnil%2Cupdates_timeout%3AInt32%7CNil%3Dnil%2Callowed_updates%3AArray%28String%29%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>@name username of the bot
+@token
+@allowlist
+@blocklist
+@updates_timeout</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="add_sticker_to_set(user_id:Int,name:String,png_sticker:::File|String,emojis:String,mask_position:MaskPosition|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>add_sticker_to_set</strong>(user_id : Int, name : String, png_sticker : ::File | String, emojis : String, mask_position : <a href="../TelegramBot/MaskPosition.html">MaskPosition</a> | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#add_sticker_to_set%28user_id%3AInt%2Cname%3AString%2Cpng_sticker%3A%3A%3AFile%7CString%2Cemojis%3AString%2Cmask_position%3AMaskPosition%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="answer_callback_query(callback_query_id:String,text:String|Nil=nil,show_alert:Bool|Nil=nil,url:String|Nil=nil,cache_time:Int32|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>answer_callback_query</strong>(callback_query_id : String, text : String | Nil = <span class="n">nil</span>, show_alert : Bool | Nil = <span class="n">nil</span>, url : String | Nil = <span class="n">nil</span>, cache_time : Int32 | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#answer_callback_query%28callback_query_id%3AString%2Ctext%3AString%7CNil%3Dnil%2Cshow_alert%3ABool%7CNil%3Dnil%2Curl%3AString%7CNil%3Dnil%2Ccache_time%3AInt32%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="answer_inline_query(inline_query_id:String,results:Array(InlineQueryResult),cache_time:Int32|Nil=nil,is_personal:Bool|Nil=nil,next_offset:String|Nil=nil,switch_pm_text:String|Nil=nil,switch_pm_parameter:String|Nil=nil):Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>answer_inline_query</strong>(inline_query_id : String, results : Array(<a href="../TelegramBot/InlineQueryResult.html">InlineQueryResult</a>), cache_time : Int32 | Nil = <span class="n">nil</span>, is_personal : Bool | Nil = <span class="n">nil</span>, next_offset : String | Nil = <span class="n">nil</span>, switch_pm_text : String | Nil = <span class="n">nil</span>, switch_pm_parameter : String | Nil = <span class="n">nil</span>) : Bool | Nil
+
+        <a class="method-permalink" href="#answer_inline_query%28inline_query_id%3AString%2Cresults%3AArray%28InlineQueryResult%29%2Ccache_time%3AInt32%7CNil%3Dnil%2Cis_personal%3ABool%7CNil%3Dnil%2Cnext_offset%3AString%7CNil%3Dnil%2Cswitch_pm_text%3AString%7CNil%3Dnil%2Cswitch_pm_parameter%3AString%7CNil%3Dnil%29%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="answer_pre_checkout_query(pre_checkout_query_id:String,ok:Bool,error_message:String|Nil=nil):Bool|Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>answer_pre_checkout_query</strong>(pre_checkout_query_id : String, ok : Bool, error_message : String | Nil = <span class="n">nil</span>) : Bool | <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#answer_pre_checkout_query%28pre_checkout_query_id%3AString%2Cok%3ABool%2Cerror_message%3AString%7CNil%3Dnil%29%3ABool%7CMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="answer_shipping_query(shipping_query_id:String,ok:Bool,shipping_option:Array(ShippingOption)|Nil=nil,error_message:String|Nil=nil):Bool|Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>answer_shipping_query</strong>(shipping_query_id : String, ok : Bool, shipping_option : Array(<a href="../TelegramBot/ShippingOption.html">ShippingOption</a>) | Nil = <span class="n">nil</span>, error_message : String | Nil = <span class="n">nil</span>) : Bool | <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#answer_shipping_query%28shipping_query_id%3AString%2Cok%3ABool%2Cshipping_option%3AArray%28ShippingOption%29%7CNil%3Dnil%2Cerror_message%3AString%7CNil%3Dnil%29%3ABool%7CMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="create_new_sticker_set(user_id:Int,name:String,title:String,png_sticker:::File|String,emojis:String,contains_masks:Bool|Nil=nil,mask_position:MaskPosition|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>create_new_sticker_set</strong>(user_id : Int, name : String, title : String, png_sticker : ::File | String, emojis : String, contains_masks : Bool | Nil = <span class="n">nil</span>, mask_position : <a href="../TelegramBot/MaskPosition.html">MaskPosition</a> | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#create_new_sticker_set%28user_id%3AInt%2Cname%3AString%2Ctitle%3AString%2Cpng_sticker%3A%3A%3AFile%7CString%2Cemojis%3AString%2Ccontains_masks%3ABool%7CNil%3Dnil%2Cmask_position%3AMaskPosition%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_chat_photo(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_chat_photo</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#delete_chat_photo%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_chat_sticker_set(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_chat_sticker_set</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#delete_chat_sticker_set%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_message(chat_id:Int|String,message_id:Int32):Message|Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_message</strong>(chat_id : Int | String, message_id : Int32) : <a href="../TelegramBot/Message.html">Message</a> | Bool | Nil
+
+        <a class="method-permalink" href="#delete_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt32%29%3AMessage%7CBool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_sticker_position_in_set(sticker:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_sticker_position_in_set</strong>(sticker : String)
+
+        <a class="method-permalink" href="#delete_sticker_position_in_set%28sticker%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_webhook:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_webhook</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#delete_webhook%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="download(file:File)-instance-method">
+      <div class="signature">
+        
+        def <strong>download</strong>(file : <a href="../TelegramBot/File.html">File</a>)
+
+        <a class="method-permalink" href="#download%28file%3AFile%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="download(file_path:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>download</strong>(file_path : String)
+
+        <a class="method-permalink" href="#download%28file_path%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="download(media)-instance-method">
+      <div class="signature">
+        
+        def <strong>download</strong>(media)
+
+        <a class="method-permalink" href="#download%28media%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_message_caption(chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil,caption:String|Nil=nil,reply_markup:InlineKeyboardMarkup|Nil=nil):Message|Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_message_caption</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, caption : String | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a> | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Bool | Nil
+
+        <a class="method-permalink" href="#edit_message_caption%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Ccaption%3AString%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_message_live_location(latitude:Float,longitude:Float,chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil,reply_markup:ReplyMarkup|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_message_live_location</strong>(latitude : Float, longitude : Float, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#edit_message_live_location%28latitude%3AFloat%2Clongitude%3AFloat%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_message_reply_markup(chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil,reply_markup:InlineKeyboardMarkup|Nil=nil):Message|Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_message_reply_markup</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a> | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Bool | Nil
+
+        <a class="method-permalink" href="#edit_message_reply_markup%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_message_text(chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil,text:String|Nil=nil,parse_mode:String|Nil=nil,disable_web_page_preview:Bool|Nil=nil,reply_markup:InlineKeyboardMarkup|Nil=nil):Message|Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_message_text</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, text : String | Nil = <span class="n">nil</span>, parse_mode : String | Nil = <span class="n">nil</span>, disable_web_page_preview : Bool | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a> | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Bool | Nil
+
+        <a class="method-permalink" href="#edit_message_text%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Ctext%3AString%7CNil%3Dnil%2Cparse_mode%3AString%7CNil%3Dnil%2Cdisable_web_page_preview%3ABool%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="export_chat_invite_link(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>export_chat_invite_link</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#export_chat_invite_link%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_message(chat_id:Int|String,from_chat_id:Int|String,message_id:Int32,disable_notification:Bool|Nil=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_message</strong>(chat_id : Int | String, from_chat_id : Int | String, message_id : Int32, disable_notification : Bool | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#forward_message%28chat_id%3AInt%7CString%2Cfrom_chat_id%3AInt%7CString%2Cmessage_id%3AInt32%2Cdisable_notification%3ABool%7CNil%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_chat(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_chat</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#get_chat%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_chat_administrators(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_chat_administrators</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#get_chat_administrators%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_chat_member(chat_id:Int|String,user_id:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_chat_member</strong>(chat_id : Int | String, user_id : Int32)
+
+        <a class="method-permalink" href="#get_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_chat_members_count(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_chat_members_count</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#get_chat_members_count%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_file(file_id:String):File-instance-method">
+      <div class="signature">
+        
+        def <strong>get_file</strong>(file_id : String) : <a href="../TelegramBot/File.html">File</a>
+
+        <a class="method-permalink" href="#get_file%28file_id%3AString%29%3AFile-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_game_high_scores(user_id:Int32,chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil):Array(GameHighScore)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_game_high_scores</strong>(user_id : Int32, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>) : Array(<a href="../TelegramBot/GameHighScore.html">GameHighScore</a>)
+
+        <a class="method-permalink" href="#get_game_high_scores%28user_id%3AInt32%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%29%3AArray%28GameHighScore%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_me-instance-method">
+      <div class="signature">
+        
+        def <strong>get_me</strong>
+
+        <a class="method-permalink" href="#get_me-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_my_commands:Array(BotCommand)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_my_commands</strong> : Array(<a href="../TelegramBot/BotCommand.html">BotCommand</a>)
+
+        <a class="method-permalink" href="#get_my_commands%3AArray%28BotCommand%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the current list of the bot's commands.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_sticker_set(name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_sticker_set</strong>(name : String)
+
+        <a class="method-permalink" href="#get_sticker_set%28name%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_user_profile_photos(user_id:Int32,offset:Int32|Nil=nil,limit:Int32|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_user_profile_photos</strong>(user_id : Int32, offset : Int32 | Nil = <span class="n">nil</span>, limit : Int32 | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#get_user_profile_photos%28user_id%3AInt32%2Coffset%3AInt32%7CNil%3Dnil%2Climit%3AInt32%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle(message:Message)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle</strong>(message : <a href="../TelegramBot/Message.html">Message</a>)
+
+        <a class="method-permalink" href="#handle%28message%3AMessage%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>handle messages</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle(inline_query:InlineQuery)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle</strong>(inline_query : <a href="../TelegramBot/InlineQuery.html">InlineQuery</a>)
+
+        <a class="method-permalink" href="#handle%28inline_query%3AInlineQuery%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>handle inline query</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle(chosen_inline_result:ChosenInlineResult)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle</strong>(chosen_inline_result : <a href="../TelegramBot/ChosenInlineResult.html">ChosenInlineResult</a>)
+
+        <a class="method-permalink" href="#handle%28chosen_inline_result%3AChosenInlineResult%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>handle chosen inlien query</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle(callback_query:CallbackQuery)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle</strong>(callback_query : <a href="../TelegramBot/CallbackQuery.html">CallbackQuery</a>)
+
+        <a class="method-permalink" href="#handle%28callback_query%3ACallbackQuery%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>handle callback query</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle_channel_post(message:Message)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle_channel_post</strong>(message : <a href="../TelegramBot/Message.html">Message</a>)
+
+        <a class="method-permalink" href="#handle_channel_post%28message%3AMessage%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle_edited(message:Message)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle_edited</strong>(message : <a href="../TelegramBot/Message.html">Message</a>)
+
+        <a class="method-permalink" href="#handle_edited%28message%3AMessage%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>handle edited messages</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle_edited_channel_post(message:Message)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle_edited_channel_post</strong>(message : <a href="../TelegramBot/Message.html">Message</a>)
+
+        <a class="method-permalink" href="#handle_edited_channel_post%28message%3AMessage%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="handle_update(u)-instance-method">
+      <div class="signature">
+        
+        def <strong>handle_update</strong>(u)
+
+        <a class="method-permalink" href="#handle_update%28u%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="kick_chat_member(chat_id:Int|String,user_id:Int,until_date:Int|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>kick_chat_member</strong>(chat_id : Int | String, user_id : Int, until_date : Int | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#kick_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Cuntil_date%3AInt%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="leave_chat(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>leave_chat</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#leave_chat%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pin_chat_message(chat_id:Int|String,message_id:Int32,disable_notification:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>pin_chat_message</strong>(chat_id : Int | String, message_id : Int32, disable_notification : Bool | Nil)
+
+        <a class="method-permalink" href="#pin_chat_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt32%2Cdisable_notification%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pin_chat_message(chat_id:Int|String,message_id:Int,disable_notification:Bool|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>pin_chat_message</strong>(chat_id : Int | String, message_id : Int, disable_notification : Bool | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#pin_chat_message%28chat_id%3AInt%7CString%2Cmessage_id%3AInt%2Cdisable_notification%3ABool%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="polling-instance-method">
+      <div class="signature">
+        
+        def <strong>polling</strong>
+
+        <a class="method-permalink" href="#polling-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>run long polling in a loop and call handlers for messages</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="promote_chat_member(chat_id:Int|String,user_id:Int,can_change_info:Bool|Nil=nil,can_post_messages:Bool|Nil=nil,can_edit_messages:Bool|Nil=nil,can_delete_messages:Bool|Nil=nil,can_invite_users:Bool|Nil=nil,can_restrict_members:Bool|Nil=nil,can_pin_messages:Bool|Nil=nil,can_promote_members:Bool|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>promote_chat_member</strong>(chat_id : Int | String, user_id : Int, can_change_info : Bool | Nil = <span class="n">nil</span>, can_post_messages : Bool | Nil = <span class="n">nil</span>, can_edit_messages : Bool | Nil = <span class="n">nil</span>, can_delete_messages : Bool | Nil = <span class="n">nil</span>, can_invite_users : Bool | Nil = <span class="n">nil</span>, can_restrict_members : Bool | Nil = <span class="n">nil</span>, can_pin_messages : Bool | Nil = <span class="n">nil</span>, can_promote_members : Bool | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#promote_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Ccan_change_info%3ABool%7CNil%3Dnil%2Ccan_post_messages%3ABool%7CNil%3Dnil%2Ccan_edit_messages%3ABool%7CNil%3Dnil%2Ccan_delete_messages%3ABool%7CNil%3Dnil%2Ccan_invite_users%3ABool%7CNil%3Dnil%2Ccan_restrict_members%3ABool%7CNil%3Dnil%2Ccan_pin_messages%3ABool%7CNil%3Dnil%2Ccan_promote_members%3ABool%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reply(message:Message,text:String):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>reply</strong>(message : <a href="../TelegramBot/Message.html">Message</a>, text : String) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#reply%28message%3AMessage%2Ctext%3AString%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="restrict_chat_member(chat_id:Int|String,user_id:Int,until_date:Int|Nil=nil,can_send_messages:Bool|Nil=nil,can_send_media_messages:Bool|Nil=nil,can_send_other_messages:Bool|Nil=nil,can_add_web_page_previews:Bool|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>restrict_chat_member</strong>(chat_id : Int | String, user_id : Int, until_date : Int | Nil = <span class="n">nil</span>, can_send_messages : Bool | Nil = <span class="n">nil</span>, can_send_media_messages : Bool | Nil = <span class="n">nil</span>, can_send_other_messages : Bool | Nil = <span class="n">nil</span>, can_add_web_page_previews : Bool | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#restrict_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt%2Cuntil_date%3AInt%7CNil%3Dnil%2Ccan_send_messages%3ABool%7CNil%3Dnil%2Ccan_send_media_messages%3ABool%7CNil%3Dnil%2Ccan_send_other_messages%3ABool%7CNil%3Dnil%2Ccan_add_web_page_previews%3ABool%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_audio(chat_id:Int|String,audio:::File|String,duration:Int32|Nil=nil,performer:String|Nil=nil,title:String|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_audio</strong>(chat_id : Int | String, audio : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, performer : String | Nil = <span class="n">nil</span>, title : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_audio%28chat_id%3AInt%7CString%2Caudio%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cperformer%3AString%7CNil%3Dnil%2Ctitle%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_chat_action(chat_id:Int|String,action:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>send_chat_action</strong>(chat_id : Int | String, action : String)
+
+        <a class="method-permalink" href="#send_chat_action%28chat_id%3AInt%7CString%2Caction%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_contact(chat_id:Int|String,phone_number:String,first_name:String,last_name:String|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_contact</strong>(chat_id : Int | String, phone_number : String, first_name : String, last_name : String | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_contact%28chat_id%3AInt%7CString%2Cphone_number%3AString%2Cfirst_name%3AString%2Clast_name%3AString%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_document(chat_id:Int|String,document:::File|String,caption:String|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_document</strong>(chat_id : Int | String, document : ::File | String, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_document%28chat_id%3AInt%7CString%2Cdocument%3A%3A%3AFile%7CString%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_game(chat_id:Int|String,game_short_name:String,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:InlineKeyboardMarkup|Nil=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_game</strong>(chat_id : Int | String, game_short_name : String, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a> | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_game%28chat_id%3AInt%7CString%2Cgame_short_name%3AString%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AInlineKeyboardMarkup%7CNil%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_invoice(chat_id:Int,tilte:String,description:String,payload:String,provider_token:String,start_parameter:String,currency:String,prices:Array(LabeledPrice),provider_data:String|Nil=nil,photo_url:String|Nil=nil,photo_size:Int32|Nil=nil,photo_width:Int32|Nil=nil,photo_height:Int32|Nil=nil,need_name:Bool|Nil=nil,need_phone_number:Bool|Nil=nil,need_email:Bool|Nil=nil,need_shipping_address:Bool|Nil=nil,is_flexible:Bool|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_invoice</strong>(chat_id : Int, tilte : String, description : String, payload : String, provider_token : String, start_parameter : String, currency : String, prices : Array(<a href="../TelegramBot/LabeledPrice.html">LabeledPrice</a>), provider_data : String | Nil = <span class="n">nil</span>, photo_url : String | Nil = <span class="n">nil</span>, photo_size : Int32 | Nil = <span class="n">nil</span>, photo_width : Int32 | Nil = <span class="n">nil</span>, photo_height : Int32 | Nil = <span class="n">nil</span>, need_name : Bool | Nil = <span class="n">nil</span>, need_phone_number : Bool | Nil = <span class="n">nil</span>, need_email : Bool | Nil = <span class="n">nil</span>, need_shipping_address : Bool | Nil = <span class="n">nil</span>, is_flexible : Bool | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_invoice%28chat_id%3AInt%2Ctilte%3AString%2Cdescription%3AString%2Cpayload%3AString%2Cprovider_token%3AString%2Cstart_parameter%3AString%2Ccurrency%3AString%2Cprices%3AArray%28LabeledPrice%29%2Cprovider_data%3AString%7CNil%3Dnil%2Cphoto_url%3AString%7CNil%3Dnil%2Cphoto_size%3AInt32%7CNil%3Dnil%2Cphoto_width%3AInt32%7CNil%3Dnil%2Cphoto_height%3AInt32%7CNil%3Dnil%2Cneed_name%3ABool%7CNil%3Dnil%2Cneed_phone_number%3ABool%7CNil%3Dnil%2Cneed_email%3ABool%7CNil%3Dnil%2Cneed_shipping_address%3ABool%7CNil%3Dnil%2Cis_flexible%3ABool%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_location(chat_id:Int|String,latitude:Float,longitude:Float,live_period:Int32|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_location</strong>(chat_id : Int | String, latitude : Float, longitude : Float, live_period : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_location%28chat_id%3AInt%7CString%2Clatitude%3AFloat%2Clongitude%3AFloat%2Clive_period%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_media_group(chat_id:Int|String,media:Array(InputMedia),disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_media_group</strong>(chat_id : Int | String, media : Array(<a href="../TelegramBot/InputMedia.html">InputMedia</a>), disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_media_group%28chat_id%3AInt%7CString%2Cmedia%3AArray%28InputMedia%29%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_message(chat_id:Int|String,text:String,parse_mode:String|Nil=nil,disable_web_page_preview:Bool|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_message</strong>(chat_id : Int | String, text : String, parse_mode : String | Nil = <span class="n">nil</span>, disable_web_page_preview : Bool | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_message%28chat_id%3AInt%7CString%2Ctext%3AString%2Cparse_mode%3AString%7CNil%3Dnil%2Cdisable_web_page_preview%3ABool%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_photo(chat_id:Int|String,photo:::File|String,caption:String|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_photo</strong>(chat_id : Int | String, photo : ::File | String, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_photo%28chat_id%3AInt%7CString%2Cphoto%3A%3A%3AFile%7CString%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>@photo file or file id</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_sticker(chat_id:Int|String,sticker:::File|String,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_sticker</strong>(chat_id : Int | String, sticker : ::File | String, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_sticker%28chat_id%3AInt%7CString%2Csticker%3A%3A%3AFile%7CString%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_venue(chat_id:Int|String,latitude:Float,longitude:Float,title:String,address:String,forsquare_id:String|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup|Nil=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_venue</strong>(chat_id : Int | String, latitude : Float, longitude : Float, title : String, address : String, forsquare_id : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_venue%28chat_id%3AInt%7CString%2Clatitude%3AFloat%2Clongitude%3AFloat%2Ctitle%3AString%2Caddress%3AString%2Cforsquare_id%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_video(chat_id:Int|String,video:::File|String,duration:Int32|Nil=nil,width:Int32|Nil=nil,height:Int32|Nil=nil,caption:String|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_video</strong>(chat_id : Int | String, video : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, width : Int32 | Nil = <span class="n">nil</span>, height : Int32 | Nil = <span class="n">nil</span>, caption : String | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_video%28chat_id%3AInt%7CString%2Cvideo%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cwidth%3AInt32%7CNil%3Dnil%2Cheight%3AInt32%7CNil%3Dnil%2Ccaption%3AString%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_video_note(chat_id:Int|String,video_note:::File|String,duration:Int32|Nil=nil,length:Int32|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_video_note</strong>(chat_id : Int | String, video_note : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, length : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_video_note%28chat_id%3AInt%7CString%2Cvideo_note%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Clength%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_voice(chat_id:Int|String,voice:::File|String,duration:Int32|Nil=nil,disable_notification:Bool|Nil=nil,reply_to_message_id:Int32|Nil=nil,reply_markup:ReplyMarkup=nil):Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>send_voice</strong>(chat_id : Int | String, voice : ::File | String, duration : Int32 | Nil = <span class="n">nil</span>, disable_notification : Bool | Nil = <span class="n">nil</span>, reply_to_message_id : Int32 | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#send_voice%28chat_id%3AInt%7CString%2Cvoice%3A%3A%3AFile%7CString%2Cduration%3AInt32%7CNil%3Dnil%2Cdisable_notification%3ABool%7CNil%3Dnil%2Creply_to_message_id%3AInt32%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%3Dnil%29%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="serve(bind_address:String=&quot;127.0.0.1&quot;,bind_port:Int32=80,ssl_certificate_path:String|Nil=nil,ssl_key_path:String|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>serve</strong>(bind_address : String = <span class="s">&quot;127.0.0.1&quot;</span>, bind_port : Int32 = <span class="n">80</span>, ssl_certificate_path : String | Nil = <span class="n">nil</span>, ssl_key_path : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#serve%28bind_address%3AString%3D%22127.0.0.1%22%2Cbind_port%3AInt32%3D80%2Cssl_certificate_path%3AString%7CNil%3Dnil%2Cssl_key_path%3AString%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_chat_description(chat_id:Int|String,description:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_chat_description</strong>(chat_id : Int | String, description : String)
+
+        <a class="method-permalink" href="#set_chat_description%28chat_id%3AInt%7CString%2Cdescription%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_chat_photo(chat_id:Int|String,photo:::File)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_chat_photo</strong>(chat_id : Int | String, photo : ::File)
+
+        <a class="method-permalink" href="#set_chat_photo%28chat_id%3AInt%7CString%2Cphoto%3A%3A%3AFile%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_chat_sticker_set(chat_id:Int|String,sticker_set_name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_chat_sticker_set</strong>(chat_id : Int | String, sticker_set_name : String)
+
+        <a class="method-permalink" href="#set_chat_sticker_set%28chat_id%3AInt%7CString%2Csticker_set_name%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_chat_title(chat_id:Int|String,title:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_chat_title</strong>(chat_id : Int | String, title : String)
+
+        <a class="method-permalink" href="#set_chat_title%28chat_id%3AInt%7CString%2Ctitle%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_game_score(user_id:Int32,score:Int32,force:Bool|Nil=nil,disable_edit_message:Bool|Nil=nil,chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil):Message|Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>set_game_score</strong>(user_id : Int32, score : Int32, force : Bool | Nil = <span class="n">nil</span>, disable_edit_message : Bool | Nil = <span class="n">nil</span>, chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>) : <a href="../TelegramBot/Message.html">Message</a> | Bool | Nil
+
+        <a class="method-permalink" href="#set_game_score%28user_id%3AInt32%2Cscore%3AInt32%2Cforce%3ABool%7CNil%3Dnil%2Cdisable_edit_message%3ABool%7CNil%3Dnil%2Cchat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%29%3AMessage%7CBool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_my_commands(commands:Array(BotCommand))-instance-method">
+      <div class="signature">
+        
+        def <strong>set_my_commands</strong>(commands : Array(<a href="../TelegramBot/BotCommand.html">BotCommand</a>))
+
+        <a class="method-permalink" href="#set_my_commands%28commands%3AArray%28BotCommand%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Change the list of the bot's commands.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_sticker_position_in_set(sticker:String,position:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_sticker_position_in_set</strong>(sticker : String, position : Int)
+
+        <a class="method-permalink" href="#set_sticker_position_in_set%28sticker%3AString%2Cposition%3AInt%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_webhook(url:String,certificate:::File|String|Nil=nil,max_connections:Int32|Nil=nil,allowed_updates:Array(String)|Nil=@allowed_updates)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_webhook</strong>(url : String, certificate : ::File | String | Nil = <span class="n">nil</span>, max_connections : Int32 | Nil = <span class="n">nil</span>, allowed_updates : Array(String) | Nil = @allowed_updates)
+
+        <a class="method-permalink" href="#set_webhook%28url%3AString%2Ccertificate%3A%3A%3AFile%7CString%7CNil%3Dnil%2Cmax_connections%3AInt32%7CNil%3Dnil%2Callowed_updates%3AArray%28String%29%7CNil%3D%40allowed_updates%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stop-instance-method">
+      <div class="signature">
+        
+        def <strong>stop</strong>
+
+        <a class="method-permalink" href="#stop-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stop_message_live_location(chat_id:Int|String|Nil=nil,message_id:Int32|Nil=nil,inline_message_id:String|Nil=nil,reply_markup:ReplyMarkup|Nil=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>stop_message_live_location</strong>(chat_id : Int | String | Nil = <span class="n">nil</span>, message_id : Int32 | Nil = <span class="n">nil</span>, inline_message_id : String | Nil = <span class="n">nil</span>, reply_markup : <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a> | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#stop_message_live_location%28chat_id%3AInt%7CString%7CNil%3Dnil%2Cmessage_id%3AInt32%7CNil%3Dnil%2Cinline_message_id%3AString%7CNil%3Dnil%2Creply_markup%3AReplyMarkup%7CNil%3Dnil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unban_chat_member(chat_id:Int|String,user_id:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>unban_chat_member</strong>(chat_id : Int | String, user_id : Int32)
+
+        <a class="method-permalink" href="#unban_chat_member%28chat_id%3AInt%7CString%2Cuser_id%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="unpin_chat_message(chat_id:Int|String)-instance-method">
+      <div class="signature">
+        
+        def <strong>unpin_chat_message</strong>(chat_id : Int | String)
+
+        <a class="method-permalink" href="#unpin_chat_message%28chat_id%3AInt%7CString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="upload_sticker_file(user_id:Int,png_sticker:::File)-instance-method">
+      <div class="signature">
+        
+        def <strong>upload_sticker_file</strong>(user_id : Int, png_sticker : ::File)
+
+        <a class="method-permalink" href="#upload_sticker_file%28user_id%3AInt%2Cpng_sticker%3A%3A%3AFile%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="macro-detail" class="anchor" href="#macro-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Detail
+  </h2>
+  
+    <div class="entry-detail" id="def_force_request(name,*args)-macro">
+      <div class="signature">
+        
+        macro <strong>def_force_request</strong>(name, *args)
+
+        <a class="method-permalink" href="#def_force_request%28name%2C%2Aargs%29-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="def_request(name,*args)-macro">
+      <div class="signature">
+        
+        macro <strong>def_request</strong>(name, *args)
+
+        <a class="method-permalink" href="#def_request%28name%2C%2Aargs%29-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

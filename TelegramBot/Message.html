@@ -1,0 +1,2280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.9.2">
+<meta name="crystal_docs.project_version" content="0.5.0">
+<meta name="crystal_docs.project_name" content="telegram_bot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="telegram_bot">
+  <title>TelegramBot::Message - telegram_bot 0.5.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          telegram_bot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.5.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="telegram_bot/Fiber" data-name="fiber">
+      <a href="../Fiber.html">Fiber</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="telegram_bot/TelegramBot" data-name="telegrambot">
+      <a href="../TelegramBot.html">TelegramBot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Animation" data-name="telegrambot::animation">
+      <a href="../TelegramBot/Animation.html">Animation</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/APIException" data-name="telegrambot::apiexception">
+      <a href="../TelegramBot/APIException.html">APIException</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Audio" data-name="telegrambot::audio">
+      <a href="../TelegramBot/Audio.html">Audio</a>
+      
+    </li>
+  
+  <li class="parent " data-id="telegram_bot/TelegramBot/Bot" data-name="telegrambot::bot">
+      <a href="../TelegramBot/Bot.html">Bot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Bot/ReplyMarkup" data-name="telegrambot::bot::replymarkup">
+      <a href="../TelegramBot/Bot/ReplyMarkup.html">ReplyMarkup</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/BotCommand" data-name="telegrambot::botcommand">
+      <a href="../TelegramBot/BotCommand.html">BotCommand</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CallbackGame" data-name="telegrambot::callbackgame">
+      <a href="../TelegramBot/CallbackGame.html">CallbackGame</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CallbackQuery" data-name="telegrambot::callbackquery">
+      <a href="../TelegramBot/CallbackQuery.html">CallbackQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Chat" data-name="telegrambot::chat">
+      <a href="../TelegramBot/Chat.html">Chat</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChatMember" data-name="telegrambot::chatmember">
+      <a href="../TelegramBot/ChatMember.html">ChatMember</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChatPhoto" data-name="telegrambot::chatphoto">
+      <a href="../TelegramBot/ChatPhoto.html">ChatPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ChosenInlineResult" data-name="telegrambot::choseninlineresult">
+      <a href="../TelegramBot/ChosenInlineResult.html">ChosenInlineResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/CmdHandler" data-name="telegrambot::cmdhandler">
+      <a href="../TelegramBot/CmdHandler.html">CmdHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Contact" data-name="telegrambot::contact">
+      <a href="../TelegramBot/Contact.html">Contact</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Document" data-name="telegrambot::document">
+      <a href="../TelegramBot/Document.html">Document</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/File" data-name="telegrambot::file">
+      <a href="../TelegramBot/File.html">File</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ForceReply" data-name="telegrambot::forcereply">
+      <a href="../TelegramBot/ForceReply.html">ForceReply</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Game" data-name="telegrambot::game">
+      <a href="../TelegramBot/Game.html">Game</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/GameHighScore" data-name="telegrambot::gamehighscore">
+      <a href="../TelegramBot/GameHighScore.html">GameHighScore</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/HttpClient" data-name="telegrambot::httpclient">
+      <a href="../TelegramBot/HttpClient.html">HttpClient</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineKeyboardButton" data-name="telegrambot::inlinekeyboardbutton">
+      <a href="../TelegramBot/InlineKeyboardButton.html">InlineKeyboardButton</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineKeyboardMarkup" data-name="telegrambot::inlinekeyboardmarkup">
+      <a href="../TelegramBot/InlineKeyboardMarkup.html">InlineKeyboardMarkup</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQuery" data-name="telegrambot::inlinequery">
+      <a href="../TelegramBot/InlineQuery.html">InlineQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResult" data-name="telegrambot::inlinequeryresult">
+      <a href="../TelegramBot/InlineQueryResult.html">InlineQueryResult</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultArticle" data-name="telegrambot::inlinequeryresultarticle">
+      <a href="../TelegramBot/InlineQueryResultArticle.html">InlineQueryResultArticle</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultAudio" data-name="telegrambot::inlinequeryresultaudio">
+      <a href="../TelegramBot/InlineQueryResultAudio.html">InlineQueryResultAudio</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedAudio" data-name="telegrambot::inlinequeryresultcachedaudio">
+      <a href="../TelegramBot/InlineQueryResultCachedAudio.html">InlineQueryResultCachedAudio</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedDocument" data-name="telegrambot::inlinequeryresultcacheddocument">
+      <a href="../TelegramBot/InlineQueryResultCachedDocument.html">InlineQueryResultCachedDocument</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedGif" data-name="telegrambot::inlinequeryresultcachedgif">
+      <a href="../TelegramBot/InlineQueryResultCachedGif.html">InlineQueryResultCachedGif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedMpeg4Gif" data-name="telegrambot::inlinequeryresultcachedmpeg4gif">
+      <a href="../TelegramBot/InlineQueryResultCachedMpeg4Gif.html">InlineQueryResultCachedMpeg4Gif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedPhoto" data-name="telegrambot::inlinequeryresultcachedphoto">
+      <a href="../TelegramBot/InlineQueryResultCachedPhoto.html">InlineQueryResultCachedPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedSticker" data-name="telegrambot::inlinequeryresultcachedsticker">
+      <a href="../TelegramBot/InlineQueryResultCachedSticker.html">InlineQueryResultCachedSticker</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedVideo" data-name="telegrambot::inlinequeryresultcachedvideo">
+      <a href="../TelegramBot/InlineQueryResultCachedVideo.html">InlineQueryResultCachedVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultCachedVoice" data-name="telegrambot::inlinequeryresultcachedvoice">
+      <a href="../TelegramBot/InlineQueryResultCachedVoice.html">InlineQueryResultCachedVoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultContact" data-name="telegrambot::inlinequeryresultcontact">
+      <a href="../TelegramBot/InlineQueryResultContact.html">InlineQueryResultContact</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultDocument" data-name="telegrambot::inlinequeryresultdocument">
+      <a href="../TelegramBot/InlineQueryResultDocument.html">InlineQueryResultDocument</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultGif" data-name="telegrambot::inlinequeryresultgif">
+      <a href="../TelegramBot/InlineQueryResultGif.html">InlineQueryResultGif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultLocation" data-name="telegrambot::inlinequeryresultlocation">
+      <a href="../TelegramBot/InlineQueryResultLocation.html">InlineQueryResultLocation</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultMpeg4Gif" data-name="telegrambot::inlinequeryresultmpeg4gif">
+      <a href="../TelegramBot/InlineQueryResultMpeg4Gif.html">InlineQueryResultMpeg4Gif</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultPhoto" data-name="telegrambot::inlinequeryresultphoto">
+      <a href="../TelegramBot/InlineQueryResultPhoto.html">InlineQueryResultPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVenue" data-name="telegrambot::inlinequeryresultvenue">
+      <a href="../TelegramBot/InlineQueryResultVenue.html">InlineQueryResultVenue</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVideo" data-name="telegrambot::inlinequeryresultvideo">
+      <a href="../TelegramBot/InlineQueryResultVideo.html">InlineQueryResultVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InlineQueryResultVoice" data-name="telegrambot::inlinequeryresultvoice">
+      <a href="../TelegramBot/InlineQueryResultVoice.html">InlineQueryResultVoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputContactMessageContent" data-name="telegrambot::inputcontactmessagecontent">
+      <a href="../TelegramBot/InputContactMessageContent.html">InputContactMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputLocationMessageContent" data-name="telegrambot::inputlocationmessagecontent">
+      <a href="../TelegramBot/InputLocationMessageContent.html">InputLocationMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMedia" data-name="telegrambot::inputmedia">
+      <a href="../TelegramBot/InputMedia.html">InputMedia</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMediaPhoto" data-name="telegrambot::inputmediaphoto">
+      <a href="../TelegramBot/InputMediaPhoto.html">InputMediaPhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMediaVideo" data-name="telegrambot::inputmediavideo">
+      <a href="../TelegramBot/InputMediaVideo.html">InputMediaVideo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputMessageContent" data-name="telegrambot::inputmessagecontent">
+      <a href="../TelegramBot/InputMessageContent.html">InputMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputTextMessageContent" data-name="telegrambot::inputtextmessagecontent">
+      <a href="../TelegramBot/InputTextMessageContent.html">InputTextMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/InputVenueMessageContent" data-name="telegrambot::inputvenuemessagecontent">
+      <a href="../TelegramBot/InputVenueMessageContent.html">InputVenueMessageContent</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Invoice" data-name="telegrambot::invoice">
+      <a href="../TelegramBot/Invoice.html">Invoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/KeyboardButton" data-name="telegrambot::keyboardbutton">
+      <a href="../TelegramBot/KeyboardButton.html">KeyboardButton</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/LabeledPrice" data-name="telegrambot::labeledprice">
+      <a href="../TelegramBot/LabeledPrice.html">LabeledPrice</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Location" data-name="telegrambot::location">
+      <a href="../TelegramBot/Location.html">Location</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/MaskPosition" data-name="telegrambot::maskposition">
+      <a href="../TelegramBot/MaskPosition.html">MaskPosition</a>
+      
+    </li>
+  
+  <li class=" current" data-id="telegram_bot/TelegramBot/Message" data-name="telegrambot::message">
+      <a href="../TelegramBot/Message.html">Message</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/MessageEntity" data-name="telegrambot::messageentity">
+      <a href="../TelegramBot/MessageEntity.html">MessageEntity</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/OrderInfo" data-name="telegrambot::orderinfo">
+      <a href="../TelegramBot/OrderInfo.html">OrderInfo</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/PhotoSize" data-name="telegrambot::photosize">
+      <a href="../TelegramBot/PhotoSize.html">PhotoSize</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/PreCheckoutQuery" data-name="telegrambot::precheckoutquery">
+      <a href="../TelegramBot/PreCheckoutQuery.html">PreCheckoutQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ReplyKeyboardMarkup" data-name="telegrambot::replykeyboardmarkup">
+      <a href="../TelegramBot/ReplyKeyboardMarkup.html">ReplyKeyboardMarkup</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ReplyKeyboardRemove" data-name="telegrambot::replykeyboardremove">
+      <a href="../TelegramBot/ReplyKeyboardRemove.html">ReplyKeyboardRemove</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ResponseClient" data-name="telegrambot::responseclient">
+      <a href="../TelegramBot/ResponseClient.html">ResponseClient</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingAddress" data-name="telegrambot::shippingaddress">
+      <a href="../TelegramBot/ShippingAddress.html">ShippingAddress</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingOption" data-name="telegrambot::shippingoption">
+      <a href="../TelegramBot/ShippingOption.html">ShippingOption</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/ShippingQuery" data-name="telegrambot::shippingquery">
+      <a href="../TelegramBot/ShippingQuery.html">ShippingQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Sticker" data-name="telegrambot::sticker">
+      <a href="../TelegramBot/Sticker.html">Sticker</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/StickerSet" data-name="telegrambot::stickerset">
+      <a href="../TelegramBot/StickerSet.html">StickerSet</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/SuccessfulPayment" data-name="telegrambot::successfulpayment">
+      <a href="../TelegramBot/SuccessfulPayment.html">SuccessfulPayment</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Update" data-name="telegrambot::update">
+      <a href="../TelegramBot/Update.html">Update</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/User" data-name="telegrambot::user">
+      <a href="../TelegramBot/User.html">User</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/UserProfilePhoto" data-name="telegrambot::userprofilephoto">
+      <a href="../TelegramBot/UserProfilePhoto.html">UserProfilePhoto</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Venue" data-name="telegrambot::venue">
+      <a href="../TelegramBot/Venue.html">Venue</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Video" data-name="telegrambot::video">
+      <a href="../TelegramBot/Video.html">Video</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/VideoNote" data-name="telegrambot::videonote">
+      <a href="../TelegramBot/VideoNote.html">VideoNote</a>
+      
+    </li>
+  
+  <li class=" " data-id="telegram_bot/TelegramBot/Voice" data-name="telegrambot::voice">
+      <a href="../TelegramBot/Voice.html">Voice</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> TelegramBot::<wbr>Message
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../TelegramBot/Message.html">TelegramBot::Message</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type">JSON::Serializable</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      telegram_bot/types/message.cr
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#animation%3AAnimation%7CNil-instance-method" class="signature"><strong>#animation</strong> : Animation | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#animation%3D%28animation%3AAnimation%7CNil%29-instance-method" class="signature"><strong>#animation=</strong>(animation : Animation | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#audio%3AAudio%7CNil-instance-method" class="signature"><strong>#audio</strong> : Audio | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#audio%3D%28audio%3AAudio%7CNil%29-instance-method" class="signature"><strong>#audio=</strong>(audio : Audio | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#author_signature%3AString%7CNil-instance-method" class="signature"><strong>#author_signature</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#author_signature%3D%28author_signature%3AString%7CNil%29-instance-method" class="signature"><strong>#author_signature=</strong>(author_signature : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#caption%3AString%7CNil-instance-method" class="signature"><strong>#caption</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#caption%3D%28caption%3AString%7CNil%29-instance-method" class="signature"><strong>#caption=</strong>(caption : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#caption_entities%3AArray%28MessageEntity%29%7CNil-instance-method" class="signature"><strong>#caption_entities</strong> : Array(MessageEntity) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#caption_entities%3D%28caption_entities%3AArray%28MessageEntity%29%7CNil%29-instance-method" class="signature"><strong>#caption_entities=</strong>(caption_entities : Array(MessageEntity) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#channel_chat_created%3D%28channel_chat_created%3ABool%7CNil%29-instance-method" class="signature"><strong>#channel_chat_created=</strong>(channel_chat_created : Bool | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#channel_chat_created%3F%3ABool%7CNil-instance-method" class="signature"><strong>#channel_chat_created?</strong> : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#chat%3AChat-instance-method" class="signature"><strong>#chat</strong> : Chat</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#chat%3D%28chat%3AChat%29-instance-method" class="signature"><strong>#chat=</strong>(chat : Chat)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contact%3AContact%7CNil-instance-method" class="signature"><strong>#contact</strong> : Contact | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#contact%3D%28contact%3AContact%7CNil%29-instance-method" class="signature"><strong>#contact=</strong>(contact : Contact | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#date%3AInt32-instance-method" class="signature"><strong>#date</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#date%3D%28date%3AInt32%29-instance-method" class="signature"><strong>#date=</strong>(date : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_chat_photo%3D%28delete_chat_photo%3ABool%7CNil%29-instance-method" class="signature"><strong>#delete_chat_photo=</strong>(delete_chat_photo : Bool | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete_chat_photo%3F%3ABool%7CNil-instance-method" class="signature"><strong>#delete_chat_photo?</strong> : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#document%3ADocument%7CNil-instance-method" class="signature"><strong>#document</strong> : Document | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#document%3D%28document%3ADocument%7CNil%29-instance-method" class="signature"><strong>#document=</strong>(document : Document | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_date%3AInt32%7CNil-instance-method" class="signature"><strong>#edit_date</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#edit_date%3D%28edit_date%3AInt32%7CNil%29-instance-method" class="signature"><strong>#edit_date=</strong>(edit_date : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#entities%3AArray%28MessageEntity%29%7CNil-instance-method" class="signature"><strong>#entities</strong> : Array(MessageEntity) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#entities%3D%28entities%3AArray%28MessageEntity%29%7CNil%29-instance-method" class="signature"><strong>#entities=</strong>(entities : Array(MessageEntity) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_date%3AInt32%7CNil-instance-method" class="signature"><strong>#forward_date</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_date%3D%28forward_date%3AInt32%7CNil%29-instance-method" class="signature"><strong>#forward_date=</strong>(forward_date : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from%3AUser%7CNil-instance-method" class="signature"><strong>#forward_from</strong> : User | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from%3D%28forward_from%3AUser%7CNil%29-instance-method" class="signature"><strong>#forward_from=</strong>(forward_from : User | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from_chat%3AChat%7CNil-instance-method" class="signature"><strong>#forward_from_chat</strong> : Chat | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from_chat%3D%28forward_from_chat%3AChat%7CNil%29-instance-method" class="signature"><strong>#forward_from_chat=</strong>(forward_from_chat : Chat | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from_message_id%3AInt32%7CNil-instance-method" class="signature"><strong>#forward_from_message_id</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_from_message_id%3D%28forward_from_message_id%3AInt32%7CNil%29-instance-method" class="signature"><strong>#forward_from_message_id=</strong>(forward_from_message_id : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_sender_name%3AString%7CNil-instance-method" class="signature"><strong>#forward_sender_name</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_sender_name%3D%28forward_sender_name%3AString%7CNil%29-instance-method" class="signature"><strong>#forward_sender_name=</strong>(forward_sender_name : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_signature%3AString%7CNil-instance-method" class="signature"><strong>#forward_signature</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forward_signature%3D%28forward_signature%3AString%7CNil%29-instance-method" class="signature"><strong>#forward_signature=</strong>(forward_signature : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from%3AUser%7CNil-instance-method" class="signature"><strong>#from</strong> : User | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from%3D%28from%3AUser%7CNil%29-instance-method" class="signature"><strong>#from=</strong>(from : User | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group_chat_created%3D%28group_chat_created%3ABool%7CNil%29-instance-method" class="signature"><strong>#group_chat_created=</strong>(group_chat_created : Bool | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group_chat_created%3F%3ABool%7CNil-instance-method" class="signature"><strong>#group_chat_created?</strong> : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invoice%3AInvoice%7CNil-instance-method" class="signature"><strong>#invoice</strong> : Invoice | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#invoice%3D%28invoice%3AInvoice%7CNil%29-instance-method" class="signature"><strong>#invoice=</strong>(invoice : Invoice | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_chat_member%3AUser%7CNil-instance-method" class="signature"><strong>#left_chat_member</strong> : User | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_chat_member%3D%28left_chat_member%3AUser%7CNil%29-instance-method" class="signature"><strong>#left_chat_member=</strong>(left_chat_member : User | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#location%3ALocation%7CNil-instance-method" class="signature"><strong>#location</strong> : Location | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#location%3D%28location%3ALocation%7CNil%29-instance-method" class="signature"><strong>#location=</strong>(location : Location | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#media_group_id%3AString%7CNil-instance-method" class="signature"><strong>#media_group_id</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#media_group_id%3D%28media_group_id%3AString%7CNil%29-instance-method" class="signature"><strong>#media_group_id=</strong>(media_group_id : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#message_id%3AInt32-instance-method" class="signature"><strong>#message_id</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#message_id%3D%28message_id%3AInt32%29-instance-method" class="signature"><strong>#message_id=</strong>(message_id : Int32)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#migrate_from_chat_id%3AInt32%7CNil-instance-method" class="signature"><strong>#migrate_from_chat_id</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#migrate_from_chat_id%3D%28migrate_from_chat_id%3AInt32%7CNil%29-instance-method" class="signature"><strong>#migrate_from_chat_id=</strong>(migrate_from_chat_id : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#migrate_to_chat_id%3AInt32%7CNil-instance-method" class="signature"><strong>#migrate_to_chat_id</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#migrate_to_chat_id%3D%28migrate_to_chat_id%3AInt32%7CNil%29-instance-method" class="signature"><strong>#migrate_to_chat_id=</strong>(migrate_to_chat_id : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_members%3AArray%28User%29%7CNil-instance-method" class="signature"><strong>#new_chat_members</strong> : Array(User) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_members%3D%28new_chat_members%3AArray%28User%29%7CNil%29-instance-method" class="signature"><strong>#new_chat_members=</strong>(new_chat_members : Array(User) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_photo%3AArray%28PhotoSize%29%7CNil-instance-method" class="signature"><strong>#new_chat_photo</strong> : Array(PhotoSize) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_photo%3D%28new_chat_photo%3AArray%28PhotoSize%29%7CNil%29-instance-method" class="signature"><strong>#new_chat_photo=</strong>(new_chat_photo : Array(PhotoSize) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_title%3AString%7CNil-instance-method" class="signature"><strong>#new_chat_title</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new_chat_title%3D%28new_chat_title%3AString%7CNil%29-instance-method" class="signature"><strong>#new_chat_title=</strong>(new_chat_title : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#photo%3AArray%28PhotoSize%29%7CNil-instance-method" class="signature"><strong>#photo</strong> : Array(PhotoSize) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#photo%3D%28photo%3AArray%28PhotoSize%29%7CNil%29-instance-method" class="signature"><strong>#photo=</strong>(photo : Array(PhotoSize) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pinned_message%3AMessage%7CNil-instance-method" class="signature"><strong>#pinned_message</strong> : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pinned_message%3D%28pinned_message%3AMessage%7CNil%29-instance-method" class="signature"><strong>#pinned_message=</strong>(pinned_message : Message | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reply_to_message%3AMessage%7CNil-instance-method" class="signature"><strong>#reply_to_message</strong> : Message | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reply_to_message%3D%28reply_to_message%3AMessage%7CNil%29-instance-method" class="signature"><strong>#reply_to_message=</strong>(reply_to_message : Message | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sticker%3ASticker%7CNil-instance-method" class="signature"><strong>#sticker</strong> : Sticker | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sticker%3D%28sticker%3ASticker%7CNil%29-instance-method" class="signature"><strong>#sticker=</strong>(sticker : Sticker | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#successful_payment%3ASuccessfulPayment%7CNil-instance-method" class="signature"><strong>#successful_payment</strong> : SuccessfulPayment | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#successful_payment%3D%28successful_payment%3ASuccessfulPayment%7CNil%29-instance-method" class="signature"><strong>#successful_payment=</strong>(successful_payment : SuccessfulPayment | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#supergroup_chat_created%3D%28supergroup_chat_created%3ABool%7CNil%29-instance-method" class="signature"><strong>#supergroup_chat_created=</strong>(supergroup_chat_created : Bool | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#supergroup_chat_created%3F%3ABool%7CNil-instance-method" class="signature"><strong>#supergroup_chat_created?</strong> : Bool | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#text%3AString%7CNil-instance-method" class="signature"><strong>#text</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#text%3D%28text%3AString%7CNil%29-instance-method" class="signature"><strong>#text=</strong>(text : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#venue%3AVenue%7CNil-instance-method" class="signature"><strong>#venue</strong> : Venue | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#venue%3D%28venue%3AVenue%7CNil%29-instance-method" class="signature"><strong>#venue=</strong>(venue : Venue | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#via_bot%3AUser%7CNil-instance-method" class="signature"><strong>#via_bot</strong> : User | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#via_bot%3D%28via_bot%3AUser%7CNil%29-instance-method" class="signature"><strong>#via_bot=</strong>(via_bot : User | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#video%3AVideo%7CNil-instance-method" class="signature"><strong>#video</strong> : Video | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#video%3D%28video%3AVideo%7CNil%29-instance-method" class="signature"><strong>#video=</strong>(video : Video | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#video_note%3AVideoNote%7CNil-instance-method" class="signature"><strong>#video_note</strong> : VideoNote | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#video_note%3D%28video_note%3AVideoNote%7CNil%29-instance-method" class="signature"><strong>#video_note=</strong>(video_note : VideoNote | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#voice%3AVoice%7CNil-instance-method" class="signature"><strong>#voice</strong> : Voice | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#voice%3D%28voice%3AVoice%7CNil%29-instance-method" class="signature"><strong>#voice=</strong>(voice : Voice | Nil)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(pull : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="animation:Animation|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>animation</strong> : <a href="../TelegramBot/Animation.html">Animation</a> | Nil
+
+        <a class="method-permalink" href="#animation%3AAnimation%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="animation=(animation:Animation|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>animation=</strong>(animation : <a href="../TelegramBot/Animation.html">Animation</a> | Nil)
+
+        <a class="method-permalink" href="#animation%3D%28animation%3AAnimation%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="audio:Audio|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>audio</strong> : <a href="../TelegramBot/Audio.html">Audio</a> | Nil
+
+        <a class="method-permalink" href="#audio%3AAudio%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="audio=(audio:Audio|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>audio=</strong>(audio : <a href="../TelegramBot/Audio.html">Audio</a> | Nil)
+
+        <a class="method-permalink" href="#audio%3D%28audio%3AAudio%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="author_signature:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>author_signature</strong> : String | Nil
+
+        <a class="method-permalink" href="#author_signature%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="author_signature=(author_signature:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>author_signature=</strong>(author_signature : String | Nil)
+
+        <a class="method-permalink" href="#author_signature%3D%28author_signature%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="caption:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>caption</strong> : String | Nil
+
+        <a class="method-permalink" href="#caption%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="caption=(caption:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>caption=</strong>(caption : String | Nil)
+
+        <a class="method-permalink" href="#caption%3D%28caption%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="caption_entities:Array(MessageEntity)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>caption_entities</strong> : Array(<a href="../TelegramBot/MessageEntity.html">MessageEntity</a>) | Nil
+
+        <a class="method-permalink" href="#caption_entities%3AArray%28MessageEntity%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="caption_entities=(caption_entities:Array(MessageEntity)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>caption_entities=</strong>(caption_entities : Array(<a href="../TelegramBot/MessageEntity.html">MessageEntity</a>) | Nil)
+
+        <a class="method-permalink" href="#caption_entities%3D%28caption_entities%3AArray%28MessageEntity%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="channel_chat_created=(channel_chat_created:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>channel_chat_created=</strong>(channel_chat_created : Bool | Nil)
+
+        <a class="method-permalink" href="#channel_chat_created%3D%28channel_chat_created%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="channel_chat_created?:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>channel_chat_created?</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#channel_chat_created%3F%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="chat:Chat-instance-method">
+      <div class="signature">
+        
+        def <strong>chat</strong> : <a href="../TelegramBot/Chat.html">Chat</a>
+
+        <a class="method-permalink" href="#chat%3AChat-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="chat=(chat:Chat)-instance-method">
+      <div class="signature">
+        
+        def <strong>chat=</strong>(chat : <a href="../TelegramBot/Chat.html">Chat</a>)
+
+        <a class="method-permalink" href="#chat%3D%28chat%3AChat%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contact:Contact|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>contact</strong> : <a href="../TelegramBot/Contact.html">Contact</a> | Nil
+
+        <a class="method-permalink" href="#contact%3AContact%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="contact=(contact:Contact|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>contact=</strong>(contact : <a href="../TelegramBot/Contact.html">Contact</a> | Nil)
+
+        <a class="method-permalink" href="#contact%3D%28contact%3AContact%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="date:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>date</strong> : Int32
+
+        <a class="method-permalink" href="#date%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="date=(date:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>date=</strong>(date : Int32)
+
+        <a class="method-permalink" href="#date%3D%28date%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_chat_photo=(delete_chat_photo:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_chat_photo=</strong>(delete_chat_photo : Bool | Nil)
+
+        <a class="method-permalink" href="#delete_chat_photo%3D%28delete_chat_photo%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete_chat_photo?:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>delete_chat_photo?</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#delete_chat_photo%3F%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="document:Document|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>document</strong> : <a href="../TelegramBot/Document.html">Document</a> | Nil
+
+        <a class="method-permalink" href="#document%3ADocument%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="document=(document:Document|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>document=</strong>(document : <a href="../TelegramBot/Document.html">Document</a> | Nil)
+
+        <a class="method-permalink" href="#document%3D%28document%3ADocument%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_date:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_date</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#edit_date%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="edit_date=(edit_date:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>edit_date=</strong>(edit_date : Int32 | Nil)
+
+        <a class="method-permalink" href="#edit_date%3D%28edit_date%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="entities:Array(MessageEntity)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>entities</strong> : Array(<a href="../TelegramBot/MessageEntity.html">MessageEntity</a>) | Nil
+
+        <a class="method-permalink" href="#entities%3AArray%28MessageEntity%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="entities=(entities:Array(MessageEntity)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>entities=</strong>(entities : Array(<a href="../TelegramBot/MessageEntity.html">MessageEntity</a>) | Nil)
+
+        <a class="method-permalink" href="#entities%3D%28entities%3AArray%28MessageEntity%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_date:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_date</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#forward_date%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_date=(forward_date:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_date=</strong>(forward_date : Int32 | Nil)
+
+        <a class="method-permalink" href="#forward_date%3D%28forward_date%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from:User|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from</strong> : <a href="../TelegramBot/User.html">User</a> | Nil
+
+        <a class="method-permalink" href="#forward_from%3AUser%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from=(forward_from:User|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from=</strong>(forward_from : <a href="../TelegramBot/User.html">User</a> | Nil)
+
+        <a class="method-permalink" href="#forward_from%3D%28forward_from%3AUser%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from_chat:Chat|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from_chat</strong> : <a href="../TelegramBot/Chat.html">Chat</a> | Nil
+
+        <a class="method-permalink" href="#forward_from_chat%3AChat%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from_chat=(forward_from_chat:Chat|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from_chat=</strong>(forward_from_chat : <a href="../TelegramBot/Chat.html">Chat</a> | Nil)
+
+        <a class="method-permalink" href="#forward_from_chat%3D%28forward_from_chat%3AChat%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from_message_id:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from_message_id</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#forward_from_message_id%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_from_message_id=(forward_from_message_id:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_from_message_id=</strong>(forward_from_message_id : Int32 | Nil)
+
+        <a class="method-permalink" href="#forward_from_message_id%3D%28forward_from_message_id%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_sender_name:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_sender_name</strong> : String | Nil
+
+        <a class="method-permalink" href="#forward_sender_name%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_sender_name=(forward_sender_name:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_sender_name=</strong>(forward_sender_name : String | Nil)
+
+        <a class="method-permalink" href="#forward_sender_name%3D%28forward_sender_name%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_signature:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_signature</strong> : String | Nil
+
+        <a class="method-permalink" href="#forward_signature%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forward_signature=(forward_signature:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>forward_signature=</strong>(forward_signature : String | Nil)
+
+        <a class="method-permalink" href="#forward_signature%3D%28forward_signature%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from:User|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>from</strong> : <a href="../TelegramBot/User.html">User</a> | Nil
+
+        <a class="method-permalink" href="#from%3AUser%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from=(from:User|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>from=</strong>(from : <a href="../TelegramBot/User.html">User</a> | Nil)
+
+        <a class="method-permalink" href="#from%3D%28from%3AUser%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group_chat_created=(group_chat_created:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>group_chat_created=</strong>(group_chat_created : Bool | Nil)
+
+        <a class="method-permalink" href="#group_chat_created%3D%28group_chat_created%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group_chat_created?:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>group_chat_created?</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#group_chat_created%3F%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invoice:Invoice|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>invoice</strong> : <a href="../TelegramBot/Invoice.html">Invoice</a> | Nil
+
+        <a class="method-permalink" href="#invoice%3AInvoice%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="invoice=(invoice:Invoice|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>invoice=</strong>(invoice : <a href="../TelegramBot/Invoice.html">Invoice</a> | Nil)
+
+        <a class="method-permalink" href="#invoice%3D%28invoice%3AInvoice%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_chat_member:User|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>left_chat_member</strong> : <a href="../TelegramBot/User.html">User</a> | Nil
+
+        <a class="method-permalink" href="#left_chat_member%3AUser%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_chat_member=(left_chat_member:User|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>left_chat_member=</strong>(left_chat_member : <a href="../TelegramBot/User.html">User</a> | Nil)
+
+        <a class="method-permalink" href="#left_chat_member%3D%28left_chat_member%3AUser%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="location:Location|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>location</strong> : <a href="../TelegramBot/Location.html">Location</a> | Nil
+
+        <a class="method-permalink" href="#location%3ALocation%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="location=(location:Location|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>location=</strong>(location : <a href="../TelegramBot/Location.html">Location</a> | Nil)
+
+        <a class="method-permalink" href="#location%3D%28location%3ALocation%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="media_group_id:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>media_group_id</strong> : String | Nil
+
+        <a class="method-permalink" href="#media_group_id%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="media_group_id=(media_group_id:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>media_group_id=</strong>(media_group_id : String | Nil)
+
+        <a class="method-permalink" href="#media_group_id%3D%28media_group_id%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="message_id:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>message_id</strong> : Int32
+
+        <a class="method-permalink" href="#message_id%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="message_id=(message_id:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>message_id=</strong>(message_id : Int32)
+
+        <a class="method-permalink" href="#message_id%3D%28message_id%3AInt32%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="migrate_from_chat_id:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>migrate_from_chat_id</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#migrate_from_chat_id%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="migrate_from_chat_id=(migrate_from_chat_id:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>migrate_from_chat_id=</strong>(migrate_from_chat_id : Int32 | Nil)
+
+        <a class="method-permalink" href="#migrate_from_chat_id%3D%28migrate_from_chat_id%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="migrate_to_chat_id:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>migrate_to_chat_id</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#migrate_to_chat_id%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="migrate_to_chat_id=(migrate_to_chat_id:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>migrate_to_chat_id=</strong>(migrate_to_chat_id : Int32 | Nil)
+
+        <a class="method-permalink" href="#migrate_to_chat_id%3D%28migrate_to_chat_id%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_members:Array(User)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_members</strong> : Array(<a href="../TelegramBot/User.html">User</a>) | Nil
+
+        <a class="method-permalink" href="#new_chat_members%3AArray%28User%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_members=(new_chat_members:Array(User)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_members=</strong>(new_chat_members : Array(<a href="../TelegramBot/User.html">User</a>) | Nil)
+
+        <a class="method-permalink" href="#new_chat_members%3D%28new_chat_members%3AArray%28User%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_photo:Array(PhotoSize)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_photo</strong> : Array(<a href="../TelegramBot/PhotoSize.html">PhotoSize</a>) | Nil
+
+        <a class="method-permalink" href="#new_chat_photo%3AArray%28PhotoSize%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_photo=(new_chat_photo:Array(PhotoSize)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_photo=</strong>(new_chat_photo : Array(<a href="../TelegramBot/PhotoSize.html">PhotoSize</a>) | Nil)
+
+        <a class="method-permalink" href="#new_chat_photo%3D%28new_chat_photo%3AArray%28PhotoSize%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_title:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_title</strong> : String | Nil
+
+        <a class="method-permalink" href="#new_chat_title%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new_chat_title=(new_chat_title:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>new_chat_title=</strong>(new_chat_title : String | Nil)
+
+        <a class="method-permalink" href="#new_chat_title%3D%28new_chat_title%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="photo:Array(PhotoSize)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>photo</strong> : Array(<a href="../TelegramBot/PhotoSize.html">PhotoSize</a>) | Nil
+
+        <a class="method-permalink" href="#photo%3AArray%28PhotoSize%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="photo=(photo:Array(PhotoSize)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>photo=</strong>(photo : Array(<a href="../TelegramBot/PhotoSize.html">PhotoSize</a>) | Nil)
+
+        <a class="method-permalink" href="#photo%3D%28photo%3AArray%28PhotoSize%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pinned_message:Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>pinned_message</strong> : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#pinned_message%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pinned_message=(pinned_message:Message|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>pinned_message=</strong>(pinned_message : <a href="../TelegramBot/Message.html">Message</a> | Nil)
+
+        <a class="method-permalink" href="#pinned_message%3D%28pinned_message%3AMessage%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reply_to_message:Message|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>reply_to_message</strong> : <a href="../TelegramBot/Message.html">Message</a> | Nil
+
+        <a class="method-permalink" href="#reply_to_message%3AMessage%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reply_to_message=(reply_to_message:Message|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>reply_to_message=</strong>(reply_to_message : <a href="../TelegramBot/Message.html">Message</a> | Nil)
+
+        <a class="method-permalink" href="#reply_to_message%3D%28reply_to_message%3AMessage%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sticker:Sticker|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>sticker</strong> : <a href="../TelegramBot/Sticker.html">Sticker</a> | Nil
+
+        <a class="method-permalink" href="#sticker%3ASticker%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sticker=(sticker:Sticker|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>sticker=</strong>(sticker : <a href="../TelegramBot/Sticker.html">Sticker</a> | Nil)
+
+        <a class="method-permalink" href="#sticker%3D%28sticker%3ASticker%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="successful_payment:SuccessfulPayment|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>successful_payment</strong> : <a href="../TelegramBot/SuccessfulPayment.html">SuccessfulPayment</a> | Nil
+
+        <a class="method-permalink" href="#successful_payment%3ASuccessfulPayment%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="successful_payment=(successful_payment:SuccessfulPayment|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>successful_payment=</strong>(successful_payment : <a href="../TelegramBot/SuccessfulPayment.html">SuccessfulPayment</a> | Nil)
+
+        <a class="method-permalink" href="#successful_payment%3D%28successful_payment%3ASuccessfulPayment%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="supergroup_chat_created=(supergroup_chat_created:Bool|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>supergroup_chat_created=</strong>(supergroup_chat_created : Bool | Nil)
+
+        <a class="method-permalink" href="#supergroup_chat_created%3D%28supergroup_chat_created%3ABool%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="supergroup_chat_created?:Bool|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>supergroup_chat_created?</strong> : Bool | Nil
+
+        <a class="method-permalink" href="#supergroup_chat_created%3F%3ABool%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="text:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>text</strong> : String | Nil
+
+        <a class="method-permalink" href="#text%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="text=(text:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>text=</strong>(text : String | Nil)
+
+        <a class="method-permalink" href="#text%3D%28text%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="venue:Venue|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>venue</strong> : <a href="../TelegramBot/Venue.html">Venue</a> | Nil
+
+        <a class="method-permalink" href="#venue%3AVenue%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="venue=(venue:Venue|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>venue=</strong>(venue : <a href="../TelegramBot/Venue.html">Venue</a> | Nil)
+
+        <a class="method-permalink" href="#venue%3D%28venue%3AVenue%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="via_bot:User|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>via_bot</strong> : <a href="../TelegramBot/User.html">User</a> | Nil
+
+        <a class="method-permalink" href="#via_bot%3AUser%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="via_bot=(via_bot:User|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>via_bot=</strong>(via_bot : <a href="../TelegramBot/User.html">User</a> | Nil)
+
+        <a class="method-permalink" href="#via_bot%3D%28via_bot%3AUser%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="video:Video|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>video</strong> : <a href="../TelegramBot/Video.html">Video</a> | Nil
+
+        <a class="method-permalink" href="#video%3AVideo%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="video=(video:Video|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>video=</strong>(video : <a href="../TelegramBot/Video.html">Video</a> | Nil)
+
+        <a class="method-permalink" href="#video%3D%28video%3AVideo%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="video_note:VideoNote|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>video_note</strong> : <a href="../TelegramBot/VideoNote.html">VideoNote</a> | Nil
+
+        <a class="method-permalink" href="#video_note%3AVideoNote%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="video_note=(video_note:VideoNote|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>video_note=</strong>(video_note : <a href="../TelegramBot/VideoNote.html">VideoNote</a> | Nil)
+
+        <a class="method-permalink" href="#video_note%3D%28video_note%3AVideoNote%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="voice:Voice|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>voice</strong> : <a href="../TelegramBot/Voice.html">Voice</a> | Nil
+
+        <a class="method-permalink" href="#voice%3AVoice%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="voice=(voice:Voice|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>voice=</strong>(voice : <a href="../TelegramBot/Voice.html">Voice</a> | Nil)
+
+        <a class="method-permalink" href="#voice%3D%28voice%3AVoice%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
