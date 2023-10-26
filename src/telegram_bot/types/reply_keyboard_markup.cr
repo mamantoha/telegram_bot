@@ -3,8 +3,8 @@ module TelegramBot
     include JSON::Serializable
 
     property text : String
-    property request_contact : Bool?
-    property request_location : Bool?
+    property? request_contact : Bool?
+    property? request_location : Bool?
 
     def initialize(
       @text : String,
@@ -19,9 +19,9 @@ module TelegramBot
     include JSON::Serializable
 
     property keyboard : Array(Array(KeyboardButton))
-    property resize_keyboard : Bool?
-    property one_time_keyboard : Bool?
-    property selective : Bool?
+    property? resize_keyboard : Bool?
+    property? one_time_keyboard : Bool?
+    property? selective : Bool?
 
     def initialize(
       @keyboard : Array(Array(KeyboardButton)),

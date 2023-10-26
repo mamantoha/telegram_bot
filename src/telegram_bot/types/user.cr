@@ -3,14 +3,14 @@ module TelegramBot
     include JSON::Serializable
 
     property id : Int64
-    property is_bot : Bool
+    property? is_bot : Bool
     property first_name : String
     property last_name : String?
     property username : String?
     property language_code : String?
-    property can_join_groups : Bool?
-    property can_read_all_group_messages : Bool?
-    property supports_inline_queries : Bool?
+    property? can_join_groups : Bool?
+    property? can_read_all_group_messages : Bool?
+    property? supports_inline_queries : Bool?
 
     def initialize(
       @id : Int64,

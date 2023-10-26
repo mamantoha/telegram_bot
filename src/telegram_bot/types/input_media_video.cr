@@ -9,6 +9,6 @@ module TelegramBot
     property width : Int32?
     property height : Int32?
     property duration : Int32?
-    property supports_streaming : Bool?
+    property? supports_streaming : Bool?
   end
 end
