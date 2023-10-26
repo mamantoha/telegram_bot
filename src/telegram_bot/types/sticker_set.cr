@@ -1,12 +1,10 @@
-require "json"
-
 module TelegramBot
   class StickerSet
-    JSON.mapping({
-      name:           String,
-      title:          String,
-      contains_masks: Bool,
-      stickers:       Array(Sticker),
-    })
+    include JSON::Serializable
+
+    property name : String
+    property title : String
+    property? contains_masks : Bool
+    property stickers : Array(Sticker)
   end
 end

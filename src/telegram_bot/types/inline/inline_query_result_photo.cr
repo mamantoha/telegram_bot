@@ -1,22 +1,32 @@
-require "json"
-
 module TelegramBot
   class InlineQueryResultPhoto < InlineQueryResult
-    FIELDS = {
-      type:                  {type: String, mustbe: "photo"},
-      id:                    String,
-      photo_url:             String,
-      thumb_url:             String,
-      photo_width:           {type: Int32, nilable: true},
-      photo_height:          {type: Int32, nilable: true},
-      title:                 {type: String, nilable: true},
-      description:           {type: String, nilable: true},
-      caption:               {type: String, nilable: true},
-      reply_markup:          {type: InlineKeyboardMarkup, nilable: true},
-      input_message_content: {type: InputMessageContent, nilable: true},
-    }
+    include JSON::Serializable
 
-    JSON.mapping({{FIELDS}})
-    initializer_for({{FIELDS}})
+    property type : String = "photo"
+    property id : String
+    property photo_url : String
+    property thumb_url : String
+    property photo_width : Int32?
+    property photo_height : Int32?
+    property title : String?
+    property description : String?
+    property caption : String?
+    property reply_markup : InlineKeyboardMarkup?
+    property input_message_content : InputMessageContent?
+
+    def initialize(
+      @id : String,
+      @photo_url : String,
+      @thumb_url : String,
+      *,
+      @photo_width = nil,
+      @photo_height = nil,
+      @title = nil,
+      @description = nil,
+      @caption = nil,
+      @reply_markup = nil,
+      @input_message_content = nil
+    )
+    end
   end
 end

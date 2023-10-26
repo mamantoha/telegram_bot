@@ -1,13 +1,11 @@
-require "json"
-
 module TelegramBot
   class InlineQuery
-    JSON.mapping({
-      id:       String,
-      from:     User,
-      location: {type: Location, nilable: true},
-      query:    String,
-      offset:   String,
-    })
+    include JSON::Serializable
+
+    property id : String
+    property from : User
+    property location : Location?
+    property query : String
+    property offset : String
   end
 end

@@ -3,7 +3,6 @@ require "http/server"
 require "json"
 require "log"
 require "./fiber.cr"
-require "./helper.cr"
 require "./types/inline/*"
 require "./types/*"
 
@@ -51,13 +50,13 @@ module TelegramBot
 
     # @name username of the bot
     # @token
-    # @whitelist
-    # @blacklist
+    # @allowlist
+    # @blocklist
     # @updates_timeout
     def initialize(@name : String,
                    @token : String,
-                   @whitelist : Array(String)? = nil,
-                   @blacklist : Array(String)? = nil,
+                   @allowlist : Array(String)? = nil,
+                   @blocklist : Array(String)? = nil,
                    @updates_timeout : Int32? = nil,
                    @allowed_updates : Array(String)? = nil)
       @nextoffset = 0
@@ -151,20 +150,20 @@ module TelegramBot
         if mf = msg.from
           from = mf
         else
-          return @whitelist.is_a?(Nil)
+          return @allowlist.nil?
         end
       else
         from = msg.from
       end
 
-      if blacklist = @blacklist
+      if blocklist = @blocklist
         if username = from.username
-          if blacklist.includes?(username)
-            # on the blacklist
-            Log.info { "#{username} blocked because he/she is on the blacklist" }
+          if blocklist.includes?(username)
+            # on the blocklist
+            Log.info { "#{username} blocked because he/she is on the blocklist" }
             return false
           else
-            # not on the blacklist
+            # not on the blocklist
             return true
           end
         else
@@ -173,23 +172,23 @@ module TelegramBot
         end
       end
 
-      if whitelist = @whitelist
+      if allowlist = @allowlist
         if username = from.username
-          if whitelist.includes?(username)
-            # on the whitelist
+          if allowlist.includes?(username)
+            # on the allowlist
             return true
           else
-            # not on the whitelist
-            Log.info { "#{username} blocked because he/she is not on the whitelist" }
+            # not on the allowlist
+            Log.info { "#{username} blocked because he/she is not on the allowlist" }
             return false
           end
         else
           # doesn't have username at all
-          Log.info { "user without username is blocked because whitelist is set" }
+          Log.info { "user without username is blocked because allowlist is set" }
           return false
         end
       end
-      return true
+      true
     end
 
     protected def request(method : String, force_http : Bool = false, params : Hash = {} of String => String | Int32 | Nil)
@@ -199,15 +198,16 @@ module TelegramBot
                  HttpClient.new(@token)
                end
 
-      response = if params.values.any?(&.is_a?(::IO::FileDescriptor))
+      response = if params.values.any?(::IO::FileDescriptor)
                    multipart_params = HTTP::Client::MultipartBody.new(params)
                    client.post_multipart method, multipart_params
-                 elsif params.any?
+                 elsif !params.empty?
                    stringified_params = params.reduce(Hash(String, String).new) { |h, (k, v)| h[k] = v.to_s; h }
                    client.post_form method, stringified_params
                  else
                    client.post method
                  end
+      client.close
 
       return nil if response.nil?
       handle_http_response(response)
@@ -217,7 +217,7 @@ module TelegramBot
       if response.status_code == 200
         json = JSON.parse(response.body)
         if json["ok"]
-          return json["result"]
+          json["result"]
         else
           raise APIException.new(200, json)
         end
@@ -652,7 +652,7 @@ module TelegramBot
                             switch_pm_text : String? = nil,
                             switch_pm_parameter : String? = nil) : Bool?
       # results   Array of InlineQueryResult  Yes   A JSON-serialized array of results for the inline query
-      results = "[" + results.join(", ") { |a| a.to_json } + "]"
+      results = "[" + results.join(", ", &.to_json) + "]"
       res = def_request "answerInlineQuery", inline_query_id, cache_time, is_personal, next_offset, results, switch_pm_text, switch_pm_parameter
       res.as_bool if res
     end
@@ -726,7 +726,7 @@ module TelegramBot
       res = res.not_nil!.as_a
       r = Array(GameHighScore).new
       res.each { |score| r << GameHighScore.from_json(score.to_json) }
-      return r
+      r
     end
 
     #
@@ -817,6 +817,22 @@ module TelegramBot
 
     def delete_sticker_position_in_set(sticker : String)
       res = def_request "deleteStickerPositionInSet", sticker
+      res.as_bool if res
+    end
+
+    # Get the current list of the bot's commands.
+    def get_my_commands : Array(BotCommand)
+      res = request "getMyCommands"
+      res = res.not_nil!.as_a
+      commands = Array(BotCommand).new
+      res.each { |command| commands << BotCommand.from_json(command.to_json) }
+      commands
+    end
+
+    # Change the list of the bot's commands.
+    def set_my_commands(commands : Array(BotCommand))
+      commands = "[" + commands.join(", ", &.to_json) + "]"
+      res = def_request "setMyCommands", commands
       res.as_bool if res
     end
   end
