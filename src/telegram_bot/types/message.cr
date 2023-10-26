@@ -36,11 +36,11 @@ module TelegramBot
     property left_chat_member : User?
     property new_chat_title : String?
     property new_chat_photo : Array(PhotoSize)?
-    property delete_chat_photo : Bool?
-    property group_chat_created : Bool?
-    property group_chat_created : Bool?
-    property supergroup_chat_created : Bool?
-    property channel_chat_created : Bool?
+    property? delete_chat_photo : Bool?
+    property? group_chat_created : Bool?
+    property? group_chat_created : Bool?
+    property? supergroup_chat_created : Bool?
+    property? channel_chat_created : Bool?
     property migrate_to_chat_id : Int32?
     property migrate_from_chat_id : Int32?
     property pinned_message : Message?

@@ -4,7 +4,7 @@ module TelegramBot
 
     property message_text : String
     property parse_mode : String?
-    property disable_web_page_preview : Bool?
+    property? disable_web_page_preview : Bool?
 
     def initialize(
       @message_text : String,

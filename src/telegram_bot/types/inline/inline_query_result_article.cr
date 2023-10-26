@@ -8,7 +8,7 @@ module TelegramBot
     property input_message_content : InputMessageContent
     property reply_markup : InlineKeyboardMarkup?
     property url : String?
-    property hide_url : Bool?
+    property? hide_url : Bool?
     property description : String?
     property thumb_url : String?
     property thumb_width : Int32?
